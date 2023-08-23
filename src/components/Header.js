@@ -1,31 +1,40 @@
 import { Link } from "react-router-dom";
 
+import { PiInstagramLogoFill } from "react-icons/pi";
+import { SiFacebook, SiNaver, SiYoutube } from "react-icons/si";
+import { GoSearch } from "react-icons/go";
+
 import "../css/Header.css";
 
 export default function Header() {
   return (
     <header>
-      <div className="headerBottom">
-        <h1><Link to="/">I Live U</Link></h1>
-
-        <form>
-          <label htmlFor="search"><Link to="search">검색</Link></label>
-          <input type="text" name="search" id="search" />
-        </form>
-      </div>
+      <h1><Link to="/">I Live U</Link></h1>
 
       <div className="headerTop">
+        <ul>
+          <li><Link to=""><PiInstagramLogoFill /></Link></li>
+          <li><Link to=""><SiFacebook /></Link></li>
+          <li><Link to=""><SiYoutube /></Link></li>
+          <li><Link to=""><SiNaver /></Link></li>
+        </ul>
+
+        <form>
+          <label htmlFor="search"><Link to="search"><GoSearch /></Link></label>
+          <input type="text" name="search" id="search" />
+        </form>
+
         <ul>
           <li><Link to="aboutUs">About Us</Link></li>
           <li><Link to="login">로그인</Link></li>
           <li><Link to="mypage">마이페이지</Link></li>
-          <li><Link to="wishList">장바구니</Link></li>
+          <li><Link to="wishList">장바구니<span>0</span></Link></li>
           <li><Link to="liked">관심상품</Link></li>
         </ul>
       </div>
 
       <nav>
-        <h2>메인 내비게이션</h2>
+        <h2 className="hide">메인 내비게이션</h2>
 
         <ul>
           <li>
@@ -67,6 +76,8 @@ export default function Header() {
               <li><Link to="">식판</Link></li>
             </ul>
           </li>
+
+          <li><Link to="">New</Link></li>
 
           <li><Link to="">On Sale</Link></li>
         </ul>  

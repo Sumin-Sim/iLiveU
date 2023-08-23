@@ -1,0 +1,112 @@
+footer {
+  padding: 32px 0;
+  background-color: #ffaea0;
+  color: #fff; 
+}
+footer a {
+  color: #fff;
+}
+footer>div {
+  width: 1280px;
+  margin: 0 auto;
+  position: relative;
+}
+footer>div>p {
+  margin-bottom: 24px;
+  font: 600 32px/1 'Cinzel', serif;
+}
+
+
+
+
+/* customer support */
+footer>div>dl {
+  width: 320px; height: 100%;
+  padding: 24px;
+  position: absolute;
+  top: 0; right: 0;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #000;
+}
+footer>div>dl a {
+  color: #000;
+}
+footer>div>dl>dt {
+  margin-bottom: 16px;
+  position: relative;
+  font: 600 24px/1 'Pretendard-SemiBold', sans-serif;
+  text-indent: 28px;
+}
+footer>div>dl>dt>span:nth-child(1) {
+  position: absolute;
+  top: 0; left: -28px;
+}
+footer>div>dl>dt>span:nth-child(2) {
+  margin-left: 8px;
+  font-size: 16px; color: #999;
+}
+footer>div>dl>dd {
+  margin-bottom: 8px;
+}
+footer>div>dl>dd:first-of-type {
+  margin-bottom: 16px;
+  font: 600 24px/1 'Pretendard-SemiBold', sans-serif;
+}
+footer>div>dl>dd>dfn {
+  margin-right: 8px;
+  font: 600 16px/1 'Pretendard-SemiBold', sans-serif;
+}
+footer>div>dl>dd:nth-last-of-type(2) {
+  font-size: 14px; color: #999;
+}
+footer>div>dl>dd:last-of-type {
+  padding: 4px 16px;
+  float: right;
+  border: 1px #ffaea0 solid;
+}
+
+
+
+
+/* info */
+footer>div>div>address {
+  margin-bottom: 32px;
+  font-size: 14px;
+}
+footer>div>div>address>p {
+  margin-bottom: 16px;
+  font: 600 16px/1 'Pretendard-SemiBold', sans-serif;
+}
+footer>div>div>address>p>span {
+  margin-left: 8px;
+}
+footer address>span {
+  width: 320px; height: 2px;
+  margin-bottom: 16px;
+  display: block;
+  background-color: #fff;
+}
+footer address>div {
+  margin-bottom: 8px;
+  display: flex;
+}
+footer address>div:last-child {
+  margin: 0;
+}
+footer address>div>dl {
+  margin-right: 16px;
+  display: flex;
+}
+footer address>div>dl:last-child {
+  margin: 0;
+}
+footer address>div>dl>dt {
+  margin-right: 8px;
+  font: 600 14px/1 'Pretendard-SemiBold', sans-serif; 
+}
+footer address>div>dl>dt>dd {}
+footer small {
+  font-size: 14px;
+  color: #fff; 
+}
