@@ -23,15 +23,15 @@ export default function Home() {
       </ul>
 
       <div className="btn">
-        <p><i><FaChevronLeft /></i></p>
-        <p><i><FaChevronRight /></i></p>
+        <p className="prev"><i><FaChevronLeft /></i></p>
+        <p className="next"><i><FaChevronRight /></i></p>
       </div>
 
       <div className="slideCount">
         <span></span>
         <span></span>
         <span></span>
-        <span className="slideNow"></span>
+        <span></span>
         <span></span>
         <span></span>
       </div>
@@ -157,10 +157,11 @@ export default function Home() {
 
       <div className="changeBtn">
           <button type="button">Best</button>
+          <span></span>
           <button type="button">New</button>
       </div>
 
-      <div>
+      <div className="bestNew_ItemList">
         <ProductItem />
         <ProductItem />
         <ProductItem />
@@ -169,8 +170,8 @@ export default function Home() {
       </div>
 
       <div className="btn">
-        <p><i><FaChevronLeft /></i></p>
-        <p><i><FaChevronRight /></i></p>
+        <p className="prev"><i><FaChevronLeft /></i></p>
+        <p className="next"><i><FaChevronRight /></i></p>
       </div>
 
       <div className="slideCount">

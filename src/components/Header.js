@@ -13,10 +13,10 @@ export default function Header() {
 
       <div className="headerTop">
         <ul>
-          <li><Link to=""><PiInstagramLogoFill /></Link></li>
-          <li><Link to=""><SiFacebook /></Link></li>
-          <li><Link to=""><SiYoutube /></Link></li>
-          <li><Link to=""><SiNaver /></Link></li>
+          <li><Link to="https://www.instagram.com" target="_blank"><PiInstagramLogoFill /></Link></li>
+          <li><Link to="https://ko-kr.facebook.com" target="_blank"><SiFacebook /></Link></li>
+          <li><Link to="https://www.youtube.com" target="_blank"><SiYoutube /></Link></li>
+          <li><Link to="https://www.naver.com" target="_blank"><SiNaver /></Link></li>
         </ul>
 
         <form>
@@ -26,6 +26,7 @@ export default function Header() {
 
         <ul>
           <li><Link to="aboutUs">About Us</Link></li>
+          <li><span></span></li>
           <li><Link to="login">로그인</Link></li>
           <li><Link to="mypage">마이페이지</Link></li>
           <li><Link to="wishList">장바구니<span>0</span></Link></li>

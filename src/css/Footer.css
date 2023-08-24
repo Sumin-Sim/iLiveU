@@ -1,5 +1,5 @@
 footer {
-  padding: 32px 0;
+  padding: 48px 0;
   background-color: #ffaea0;
   color: #fff; 
 }
@@ -32,40 +32,49 @@ footer>div>dl {
 footer>div>dl a {
   color: #000;
 }
+
+
+/* title */
 footer>div>dl>dt {
   margin-bottom: 16px;
   position: relative;
   font: 600 20px/1 'Pretendard-SemiBold', sans-serif;
-  text-indent: 28px;
+  text-indent: 24px;
 }
 footer>div>dl>dt>i {
   position: absolute;
-  top: 0; left: -28px;
+  top: 0; left: -24px;
 }
 footer>div>dl>dt>span {
   margin-left: 8px;
   font-size: 14px; color: #999;
 }
+
+
+/* dd common */
 footer>div>dl>dd {
   margin-bottom: 8px;
 }
 footer>div>dl>dd {
   font-size: 14px;
 }
+
+
+/* tel number */
 footer>div>dl>dd:first-of-type {
   margin-bottom: 16px;
-  font: 600 20px/1 'Pretendard-SemiBold', sans-serif;
+  font: 900 24px/1 'Pretendard-ExtraBold', sans-serif;
 }
 footer>div>dl>dd>dfn {
   margin-right: 8px;
   font: 600 14px/1 'Pretendard-SemiBold', sans-serif;
 }
 footer>div>dl>dd:nth-last-of-type(2) {
+  margin: 0;
   font-size: 14px; color: #999;
 }
 footer>div>dl>dd:last-of-type {
   margin: 0;
-  float: right;
   position: absolute;
   bottom: 24px; right: 24px;
   border: 1px #ffaea0 solid;
@@ -73,6 +82,7 @@ footer>div>dl>dd:last-of-type {
 footer>div>dl>dd:last-of-type a {
   padding: 4px 36px 4px 16px;
   display: block;
+  color: #ffaea0;
 }
 footer>div>dl>dd:last-of-type i {
   position: absolute;
@@ -101,7 +111,7 @@ footer>div>div>address>p>span {
   margin-left: 8px;
 }
 footer address>span {
-  width: 320px; height: 2px;
+  width: 16px; height: 2px;
   margin-bottom: 16px;
   display: block;
   background-color: #fff;

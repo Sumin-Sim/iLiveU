@@ -78,24 +78,29 @@ div.headerTop>form>input {
 div.headerTop>ul:nth-child(3)>li {
   margin-left: 16px;
 }
+div.headerTop>ul:nth-child(3) a {
+  font-size: 14px; color: #999;
+}
 div.headerTop>ul:nth-child(3)>li:hover>a {
   color: #ff6347;
 }
 div.headerTop>ul:nth-child(3)>li:first-child {
-  margin-left: 0; padding-right: 16px;
-  border-right: 1px #999 solid;
+  margin-left: 0;
 }
-div.headerTop>ul:nth-child(3) a {
-  font-size: 14px; color: #999;
+div.headerTop>ul:nth-child(3)>li:nth-child(2)>span {
+  width: 2px; height: 14px;
+  display: block;
+  background-color: #999;
 }
+
+
 /* wishlist */
-div.headerTop>ul:nth-child(3)>li:nth-child(4) {
+div.headerTop>ul:nth-child(3)>li:nth-child(5) {
   padding-right: 20px;
   position: relative
 }
-div.headerTop>ul:nth-child(3) span {
+div.headerTop>ul:nth-child(3)>li:nth-child(5) span {
   width: 16px; height: 16px;
-  padding-left: 1px;
   position: absolute;
   top: 0; right: 0;
   box-sizing: border-box;
