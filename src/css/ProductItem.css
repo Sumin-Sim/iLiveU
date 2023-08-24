@@ -1,0 +1,57 @@
+figure.productItem {
+  width: 296px;
+  margin-bottom: 48px;
+  position: relative;
+  background-color: aqua;
+}
+figure.productItem>img {
+  margin-bottom: 16px;
+}
+figure.productItem>figcaption {}
+figure.productItem>figcaption>dl {}
+figure.productItem>figcaption>dl>dt {
+  margin-bottom: 12px;
+  font: 600 20px/1 'Pretendard-SemiBold', sans-serif;
+}
+
+
+/* price */
+figure.productItem>figcaption>dl>dd:first-of-type {
+  margin-bottom: 12px;
+}
+figure.productItem>figcaption ins {
+  text-decoration: none;
+}
+figure.productItem>figcaption del {
+  margin: 0 8px;
+  font-size: 14px; color: #999;
+}
+figure.productItem>figcaption>dl>dd:first-of-type>span {
+  color: #ff6347;
+}
+
+
+/* rating */
+figure.productItem>figcaption dd:nth-of-type(2) {
+  color: #999;
+  text-align: right;
+}
+figure.productItem>figcaption dd:nth-of-type(2)>dfn {
+  margin-right: 4px;
+  color: #000;
+}
+figure.productItem>figcaption dd:nth-of-type(2)>dfn>i {
+  color: #ff6347;
+}
+
+
+/* option */
+figure.productItem>figcaption dd:nth-of-type(3) {
+  position: absolute;
+}
+figure.productItem>figcaption dd:nth-of-type(3)>ul {}
+figure.productItem>figcaption dd:nth-of-type(3)>ul>li {}
+figure.productItem>figcaption dd:nth-of-type(3)>ul>li>a {}
+figure.productItem>figcaption dd:nth-of-type(3)>ul>li>i {
+}
+figure.productItem>figcaption dd:nth-of-type(3)>ul>li>span {}

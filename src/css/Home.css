@@ -1,0 +1,115 @@
+/* mainTitle */
+h3.mainTitle {
+  margin-bottom: 48px;
+  font: 200 32px/1 'Pretendard-ExtraLight', sans-serif; color: #ffaea0;
+  text-align: center;
+}
+h3.mainTitle>b {
+  font: 900 32px/1 'Pretendard-Black', sans-serif; color: #ff6347;;
+}
+h3.mainTitle>span {
+  font: 200 20px/1 'Pretendard-ExtraLight', sans-serif; color: #000;
+}
+
+
+
+
+/* section#visual */
+section#visual {
+  height: 800px;
+  position: relative;
+}
+section#visual>ul {
+  width: 1920px;
+  margin: 0 auto;
+  display: flex;
+  overflow: hidden;
+}
+section#visual>ul img {
+  width: 1920px; height: 800px;
+}
+section#visual>div.btn {
+  width: 100vw; max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+}
+section#visual>div.btn>p {
+  position: absolute;
+  top: calc(-400px - 24px);
+  font-size: 48px;
+  color: #ffaea0;
+  cursor: pointer;
+}
+section#visual>div.btn>p:first-child {
+  left: 16px;
+}
+section#visual>div.btn>p:last-child {
+  right: 16px;
+}
+section#visual>div.slideCount {
+  width: 1920px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 32px; left: calc(50% - 960px);
+}
+section#visual>div.slideCount>span {
+  width: 12px; height: 12px;
+  margin-right: 16px;
+  display: block;
+  border-radius: 50%;
+  background-color: rgb(255, 99, 71, 0.5);
+  cursor: pointer;
+}
+section#visual>div.slideCount>span.slideNow {
+  background-color: rgb(255, 99, 71, 1);
+  box-shadow: 0px 0px 0px 2px #fff;
+}
+
+
+
+
+/* section#category */
+section#category {
+  border-top: 1px #ddd solid;
+  border-bottom: 1px #ddd solid;
+}
+section#category>ul {
+  width: 1280px;
+  margin: 0 auto; padding: 32px 0;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+section#category figure {
+  text-align: center;
+}
+section#category figure>img {
+  width: 80px; height: 80px;
+  margin-bottom: 8px;
+  border-radius: 50%;
+}
+section#category figure>figcaption {
+  color: #999;
+}
+section#category figure:hover>img {
+  box-shadow: 0px 0px 4px 4px #ffaea0;
+}
+section#category figure:hover>figcaption {
+  color: #ff6347;
+}
+
+
+
+
+/* section#bestNew */
+section#bestNew {
+  width: 1280px;
+  margin: 0 auto; padding: 64px 0;
+  background-color: green;
+}
+section#bestNew>h3 {}
+
+
+

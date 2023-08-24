@@ -111,7 +111,7 @@ div.headerTop>ul:nth-child(3) span {
 /* nav */
 nav {
   border-top: 1px #ff6347 solid;
-  border-bottom: 1px #ff6347 solid;
+  border-bottom: 8px #ff6347 solid;
 }
 nav>ul {
   width: 1280px;

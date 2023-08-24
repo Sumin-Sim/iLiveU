@@ -64,11 +64,15 @@ footer>div>dl>dd:nth-last-of-type(2) {
   font-size: 14px; color: #999;
 }
 footer>div>dl>dd:last-of-type {
-  margin: 0; padding: 4px 36px 4px 16px;
+  margin: 0;
   float: right;
   position: absolute;
   bottom: 24px; right: 24px;
   border: 1px #ffaea0 solid;
+}
+footer>div>dl>dd:last-of-type a {
+  padding: 4px 36px 4px 16px;
+  display: block;
 }
 footer>div>dl>dd:last-of-type i {
   position: absolute;
@@ -120,7 +124,6 @@ footer address>div>dl>dt {
   margin-right: 8px;
   font: 600 14px/1 'Pretendard-SemiBold', sans-serif; 
 }
-footer address>div>dl>dt>dd {}
 footer small {
   font-size: 14px;
   color: #fff; 
