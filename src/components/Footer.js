@@ -12,7 +12,7 @@ export default function Footer() {
         <p>I Live U</p>
 
         <dl>
-          <dt><i><BiSupport /></i>고객 지원 센터<span>Customer Support</span></dt>
+          <dt><i><BiSupport /></i>고객센터<span>Customer Support</span></dt>
 
           <dd><Link to="tel:012-345-6789">012-345-6789</Link></dd>
           <dd>
