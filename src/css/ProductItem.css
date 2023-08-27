@@ -3,7 +3,8 @@ figure.productItem {
   margin: 0 32px 48px 0; padding: 312px 16px 16px;
   position: relative;
   box-sizing: border-box;
-  border: 1px #ddd solid;
+  border: 1px #eee solid;
+  background-color: #fff;
 }
 figure.productItem img {
   width: 296px; height: 296px;

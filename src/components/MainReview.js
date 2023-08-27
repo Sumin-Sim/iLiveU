@@ -3,28 +3,32 @@ import { Link } from "react-router-dom";
 import { FaChevronRight } from "react-icons/fa";
 import { PiStarFill } from "react-icons/pi";
 
+import "../css/MainReview.css";
+
 export default function MainReview() {
   return (
-    <figure>
+    <figure className="mainReview">
       <img src="./img/productItem.png" alt="상품 이미지" />
 
       <figcaption>
         <dl>
           <dt>review title</dt>
 
-          <dd>
-            <dfn><i><PiStarFill /></i>5.0</dfn>
-            &#40;9,999&#41;
-          </dd>
-          <dd>rivew text. rivew text. rivew text. rivew text. rivew text. rivew text. rivew text. rivew text. rivew text. rivew text. rivew text. rivew text. rivew text. rivew text. rivew text. rivew text. rivew text. rivew text.</dd>
-          <dd>userId</dd>
+          <dd>review text. review text. review text. review text. review text. review text. review text. review text. review text. review text. review text. review text. review text. review text. review text. review text. review text. review text. review text. review text. review text. review text.</dd>
           <dd>2000.01.01</dd>
+          <dd>userId</dd>
         </dl>
 
         <Link to="">
           <div>
             <img src="./img/productItem.png" alt="상품 이미지" />
-            <span>상품명</span>
+
+            <dl>
+              <dt>상품명</dt>
+              <dd><dfn><i><PiStarFill /></i>5.0</dfn>
+              &#40;9,999&#41;</dd>
+            </dl>
+            
             <p><i><FaChevronRight /></i></p>
           </div>
         </Link>

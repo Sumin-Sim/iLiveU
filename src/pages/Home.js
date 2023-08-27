@@ -162,11 +162,40 @@ export default function Home() {
       </div>
 
       <div className="bestNew_ItemList">
-        <ProductItem />
-        <ProductItem />
-        <ProductItem />
-        <ProductItem />
-        <ProductItem />
+        <div>
+          <ul>
+            <li><ProductItem /></li>
+            <li><ProductItem /></li>
+            <li><ProductItem /></li>
+            <li><ProductItem /></li>
+            <li><ProductItem /></li>
+            <li><ProductItem /></li>
+            <li><ProductItem /></li>
+            <li><ProductItem /></li>
+          </ul>
+
+          <ul>
+            <li><ProductItem /></li>
+            <li><ProductItem /></li>
+            <li><ProductItem /></li>
+            <li><ProductItem /></li>
+            <li><ProductItem /></li>
+            <li><ProductItem /></li>
+            <li><ProductItem /></li>
+            <li><ProductItem /></li>
+          </ul>
+          
+          <ul>
+            <li><ProductItem /></li>
+            <li><ProductItem /></li>
+            <li><ProductItem /></li>
+            <li><ProductItem /></li>
+            <li><ProductItem /></li>
+            <li><ProductItem /></li>
+            <li><ProductItem /></li>
+            <li><ProductItem /></li>
+          </ul>
+        </div>
       </div>
 
       <div className="btn">
@@ -183,35 +212,89 @@ export default function Home() {
 
     <section id="eventBanner">
       <div>
-        <img src="./img/ex.png" alt="이벤트 배너 이미지01" />
-
         <div className="eventText">
           <h3>이벤트 런칭! <b>상품명</b></h3>
           <p>이벤트 상세 내용 이벤트 상세 내용 이벤트 상세 내용 이벤트 상세 내용 이벤트 상세 내용</p>
           <p><Link to="">More<i><FaPlus /></i></Link></p>
         </div>
 
+        <img src="./img/ex.png" alt="이벤트 배너 이미지01" />
         <img src="./img/ex.png" alt="이벤트 배너 이미지02" />
       </div>
     </section>
 
-    <section id="themeProduct">
+    <section id="recommendCategory">
       <div>
-        <h3 className="mainTitle"><b>I Live U</b>'s Recommendation<br /> <span>아이리브유가 추천합니다.</span></h3>
-        <p>테마 설명 텍스트 입력. 테마 설명 텍스트 입력. 테마 설명 텍스트 입력. 테마 설명 텍스트 입력.</p>
+        <div>
+          <h3 className="mainTitle"><b>I Live U</b>'s Recommendation<br /> <span>아이리브유 추천 카테고리</span></h3>
 
-        <img src="./img/ex.png" alt="테마 상품 이미지" />
-        <img src="./img/ex.png" alt="테마 상품 이미지" />
-        <img src="./img/ex.png" alt="테마 상품 이미지" />
+          <Link to="/">
+            <figure>
+              <img src="./img/ex.png" alt="테마 상품 이미지" />
+
+              <span></span>
+
+              <figcaption>
+                <dl>
+                  <dt>카테고리명</dt>
+                  <dd>카테고리 설명</dd>
+                </dl>
+              </figcaption>
+            </figure>
+          </Link>
+          <Link to="/">
+            <figure>
+              <img src="./img/ex.png" alt="테마 상품 이미지" />
+
+              <span></span>
+
+              <figcaption>
+                <dl>
+                  <dt>카테고리명</dt>
+                  <dd>카테고리 설명</dd>
+                </dl>
+              </figcaption>
+            </figure>
+          </Link>
+          <Link to="/">
+            <figure>
+              <img src="./img/ex.png" alt="테마 상품 이미지" />
+
+              <span></span>
+
+              <figcaption>
+                <dl>
+                  <dt>카테고리명</dt>
+                  <dd>카테고리 설명</dd>
+                </dl>
+              </figcaption>
+            </figure>
+          </Link>
+        </div>
+
+        <Link to="/">
+          <figure>
+            <img src="./img/ex.png" alt="테마 상품 대표이미지" />
+
+            <span></span>
+
+            <figcaption>
+              <dl>
+                <dt>카테고리명</dt>
+                <dd>카테고리 설명</dd>
+              </dl>
+            </figcaption>
+          </figure>
+        </Link>
       </div>
-
-      <img src="./img/ex.png" alt="테마 상품 이미지" />
     </section>
 
     <section id="bestReview">
-      <h3 className="mainTitle"><b>Best Review</b><br /> <span>베스트 리뷰</span></h3>
+      <h3 className="mainTitle"><b>Best Review</b><br /> <span>리뷰로 말하는 아이리브유</span></h3>
 
       <div>
+        <MainReview />
+        <MainReview />
         <MainReview />
         <MainReview />
         <MainReview />

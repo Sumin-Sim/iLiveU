@@ -60,7 +60,7 @@ footer>div>dl>dd {
 }
 
 
-/* tel number */
+/* text */
 footer>div>dl>dd:first-of-type {
   margin-bottom: 16px;
   font: 900 24px/1 'Pretendard-ExtraBold', sans-serif;

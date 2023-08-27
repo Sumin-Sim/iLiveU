@@ -43,7 +43,7 @@ div.headerTop>ul:nth-child(1)>li {
   font-size: 16px;
 }
 div.headerTop>ul:nth-child(1)>li:last-child {
-  margin-right: 0; padding-left: 1px;
+  margin-right: 0;
   font-size: 12px;
 }
 div.headerTop>ul:nth-child(1)>li a {

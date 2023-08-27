@@ -1,0 +1,87 @@
+figure.mainReview {
+  width: 400px;
+  margin-bottom: 64px;
+  overflow: hidden;
+  border-radius: 32px;
+  background-color: #fff;
+  box-shadow: 0 0 8px #999;
+}
+figure.mainReview>img {
+  width: 100%; height: 400px;
+}
+
+
+/* figcaption */
+figure.mainReview figcaption {
+  padding: 32px;
+}
+figure.mainReview figcaption>dl {
+  margin-bottom: 32px; padding-bottom: 32px;
+  border-bottom: 1px #eee solid;
+}
+figure.mainReview figcaption>dl>dt {
+  margin-bottom: 16px;
+  overflow: hidden;
+  font: 600 16px/1 'Pretendard-SemiBold', sans-serif; color: #ff6347;
+  text-overflow: ellipsis; white-space: nowrap;
+}
+figure.mainReview figcaption>dl>dd {
+  font-size: 14px;
+}
+figure.mainReview figcaption>dl>dd:nth-of-type(1) {
+  max-height: 100px;
+  margin-bottom: 32px;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  line-height: 20px; text-align: justify;
+}
+figure.mainReview figcaption>dl>dd:nth-of-type(2) {
+  margin-right: 16px; padding-right: 16px;
+  display: inline-block;
+  border-right: 1px #999 solid;
+  color: #999;
+}
+figure.mainReview figcaption>dl>dd:nth-of-type(3) {
+  display: inline-block;
+  color: #999;
+}
+
+
+/* product link */
+figure.mainReview div {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+figure.mainReview div>img {
+  width: 80px; height: 80px;
+  margin-right: 16px;
+}
+figure.mainReview div dt {
+  margin-bottom: 8px;
+  overflow: hidden;
+  font: 600 16px/1 'Pretendard-SemiBold', sans-serif;
+  text-overflow: ellipsis; white-space: nowrap;
+}
+figure.mainReview div dd {
+  margin-left: 14px;
+  font-size: 14px; color: #999;
+}
+figure.mainReview div dd>dfn {
+  margin-right: 4px;
+  position: relative;
+  color: #000;
+}
+figure.mainReview div dd>dfn>i {
+  position: absolute;
+  top: 0; left: -14px;
+  color: #ff6347;
+}
+figure.mainReview div>p {
+  position: absolute;
+  top: calc(50% - 12px); right: -4px;
+  font-size: 24px; color: #ffaea0;
+}
