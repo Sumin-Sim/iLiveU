@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+import menuData from "../assets/menu.json";
+
 import { PiInstagramLogoFill } from "react-icons/pi";
 import { SiFacebook, SiNaver, SiYoutube } from "react-icons/si";
 import { GoSearch } from "react-icons/go";
@@ -38,51 +40,37 @@ export default function Header() {
         <h2 className="hide">메인 내비게이션</h2>
 
         <ul>
-          <li>
-            <Link to="">Tableware</Link>
-            <ul>
-              <li>식기<span>Tableware</span></li>
-              <li><Link to="">공기&amp;접시</Link></li>
-              <li><Link to="">다용도볼</Link></li>
-              <li><Link to="">수저</Link></li>
-              <li><Link to="">컵&amp;잔</Link></li>
-              <li><Link to="">물병</Link></li>
-            </ul>
-          </li>
-
-          <li>
-            <Link to="">Kitchen</Link>
-            <ul>
-              <li>주방<span>Kitchen</span></li>
-              <li><Link to="">조리도구</Link></li>
-              <li><Link to="">주방용품&amp;소품</Link></li>
-            </ul>
-          </li>
-
-          <li>
-            <Link to="">Table Deco</Link>
-            <ul>
-              <li>테이블 장식<span>Table Deco</span></li>
-              <li><Link to="">쟁반&amp;트레이</Link></li>
-              <li><Link to="">식탁보&amp;매트</Link></li>
-              <li><Link to="">코스터</Link></li>
-            </ul>
-          </li>
-
-          <li>
-            <Link to="">ETC</Link>
-            <ul>
-              <li>기타 상품<span>ETC</span></li>
-              <li><Link to="">도시락통</Link></li>
-              <li><Link to="">식판</Link></li>
-            </ul>
-          </li>
-
-          <li><Link to="">New</Link></li>
-
-          <li><Link to="">On Sale</Link></li>
-        </ul>  
+          {
+          menuData.map((menu) => (
+            <li key={menu.id}>
+              <Link to="">{menu.title}</Link>
+              <SubMenu
+                menu = {menu}
+                subMenu = {menu.subMenu}
+              />
+            </li>
+          ))
+          }
+        </ul>
       </nav>
     </header>
   );
+}
+
+
+function SubMenu({ menu, subMenu }) {
+  if(subMenu.length > 1) {
+    return (
+      <ul>
+        <li>{menu.titleKo}<span>{menu.title}</span></li>
+        {
+        subMenu.map((subMenu) => (
+          <li key={subMenu.id}>
+            <Link to="">{subMenu.title}</Link>
+          </li>
+        ))
+        }
+      </ul>
+    );
+  }
 }

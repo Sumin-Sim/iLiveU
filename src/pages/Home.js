@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+import menuData from "../assets/menu.json";
+
 import { FaChevronLeft, FaChevronRight, FaPlus } from "react-icons/fa";
 
 import ProductItem from "../components/ProductItem";
@@ -41,114 +43,7 @@ export default function Home() {
       <h3 className="hide">전체 카테고리</h3>
     
       <ul>
-        <li>
-          <Link to="">
-            <figure>
-              <img src="./img/category_1.png" alt="category_1" />
-            
-              <figcaption>공기&amp;접시</figcaption>
-            </figure>       
-          </Link>
-        </li>
-        <li>
-          <Link to="">
-            <figure>
-              <img src="./img/category_2.png" alt="category_2" />
-            
-              <figcaption>다용도볼</figcaption>
-            </figure>       
-          </Link>
-        </li>
-        <li>
-          <Link to="">
-            <figure>
-              <img src="./img/category_3.png" alt="category_3" />
-            
-              <figcaption>수저</figcaption>
-            </figure>       
-          </Link>
-        </li>
-        <li>
-          <Link to="">
-            <figure>
-              <img src="./img/category_4.png" alt="category_4" />
-            
-              <figcaption>컵&amp;잔</figcaption>
-            </figure>       
-          </Link>
-        </li>
-        <li>
-          <Link to="">
-            <figure>
-              <img src="./img/category_5.png" alt="category_5" />
-            
-              <figcaption>물병</figcaption>
-            </figure>       
-          </Link>
-        </li>
-        <li>
-          <Link to="">
-            <figure>
-              <img src="./img/category_6.png" alt="category_6" />
-            
-              <figcaption>조리도구</figcaption>
-            </figure>       
-          </Link>
-        </li>
-        <li>
-          <Link to="">
-            <figure>
-              <img src="./img/category_7.png" alt="category_7" />
-            
-              <figcaption>주방용품&amp;소품</figcaption>
-            </figure>       
-          </Link>
-        </li>
-        <li>
-          <Link to="">
-            <figure>
-              <img src="./img/category_8.png" alt="category_8" />
-            
-              <figcaption>쟁반&amp;트레이</figcaption>
-            </figure>       
-          </Link>
-        </li>
-        <li>
-          <Link to="">
-            <figure>
-              <img src="./img/category_9.png" alt="category_9" />
-            
-              <figcaption>식탁보&amp;매트</figcaption>
-            </figure>       
-          </Link>
-        </li>
-        <li>
-          <Link to="">
-            <figure>
-              <img src="./img/category_10.png" alt="category_10" />
-            
-              <figcaption>코스터</figcaption>
-            </figure>       
-          </Link>
-        </li>
-        <li>
-          <Link to="">
-            <figure>
-              <img src="./img/category_11.png" alt="category_11" />
-            
-              <figcaption>도시락통</figcaption>
-            </figure>       
-          </Link>
-        </li>
-        <li>
-          <Link to="">
-            <figure>
-              <img src="./img/category_12.png" alt="category_12" />
-            
-              <figcaption>식판</figcaption>
-            </figure>       
-          </Link>
-        </li>
+        <CategoryMenu />
       </ul>
     </section>
 
@@ -302,5 +197,38 @@ export default function Home() {
       </div>
     </section>
     </>
+  );
+}
+
+
+function CategoryMenu() {
+  let subMenuList = [];
+
+  for(let i = 0 ; i < menuData.length ; i ++) {
+    if(menuData[i].subMenu.length > 1) {
+      const subMenu = menuData[i].subMenu;
+      for(let i = 0 ; i < subMenu.length ; i ++) {
+        const newtitle = subMenu[i].title;
+        const newImg = subMenu[i].imgSrc;
+
+        const newMenu = {"id": [i], "title": newtitle, "imgSrc": newImg}
+
+        subMenuList = [...subMenuList, newMenu];
+      }
+    }
+  }
+
+  return (
+    subMenuList.map((item) => (
+      <li key={item.id}>
+        <Link to="">
+          <figure>
+            <img src={item.imgSrc} alt={item.title} />
+
+            <figcaption>{item.title}</figcaption>
+          </figure>
+        </Link>
+      </li>
+    ))
   );
 }

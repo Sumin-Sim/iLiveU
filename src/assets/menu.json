@@ -1,0 +1,62 @@
+[
+  {
+    "id": 0,
+    "title": "Tableware",
+    "titleKo": "식기",
+    "slug": "tableware",
+    "subMenu": [
+      {"id": 0, "title": "공기&접시", "slug": "dish", "imgSrc": "./img/category_1.png"},
+      {"id": 1, "title": "다용도볼", "slug": "bowl", "imgSrc": "./img/category_2.png"},
+      {"id": 2, "title": "수저", "slug": "spoon", "imgSrc": "./img/category_3.png"},
+      {"id": 3, "title": "컵&잔", "slug": "cup", "imgSrc": "./img/category_4.png"},
+      {"id": 4, "title": "물병", "slug": "bottle", "imgSrc": "./img/category_5.png"}
+    ]
+  },
+  {
+    "id": 1,
+    "title": "Kitchen",
+    "titleKo": "주방",
+    "slug": "kitchen",
+    "subMenu": [
+      {"id": 0, "title": "조리도구", "slug": "tool", "imgSrc": "./img/category_6.png"},
+      {"id": 1, "title": "주방용품&소품", "slug": "item", "imgSrc": "./img/category_7.png"}
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Table Deco",
+    "titleKo": "테이블 장식",
+    "slug": "tabledeco",
+    "subMenu": [
+      {"id": 0, "title": "쟁반&트레이", "slug": "tray", "imgSrc": "./img/category_8.png"},
+      {"id": 1, "title": "식탁보&매트", "slug": "cloth", "imgSrc": "./img/category_9.png"},
+      {"id": 2, "title": "코스터", "slug": "coaster", "imgSrc": "./img/category_10.png"}
+    ]
+  },
+  {
+    "id": 3,
+    "title": "ETC",
+    "titleKo": "기타 상품",
+    "slug": "etc",
+    "subMenu": [
+      {"id": 0, "title": "도시락통", "slug": "lunchbox", "imgSrc": "./img/category_11.png"},
+      {"id": 1, "title": "식판", "slug": "foodtray", "imgSrc": "./img/category_12.png"}
+    ]
+  },
+  {
+    "id": 4,
+    "title": "New",
+    "titleKo": "신상품",
+    "slug": "new",
+    "imgSrc": "",
+    "subMenu": ""
+  },
+  {
+    "id": 5,
+    "title": "On Sale",
+    "titleKo": "할인상품",
+    "slug": "onsale",
+    "imgSrc": "",
+    "subMenu": ""
+  }
+]
