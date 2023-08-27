@@ -40,6 +40,9 @@ section#visual>div.btn>p {
   color: #ffaea0;
   cursor: pointer;
 }
+section#visual>div.btn>p:hover {
+  color: #ff6347;
+}
 section#visual>div.btn>p:first-child {
   left: 48px;
 }
@@ -183,6 +186,9 @@ section#bestNew>div.btn>p {
   font-size: 48px;
   color: #eee;
   cursor: pointer;
+}
+section#bestNew>div.btn>p:hover {
+  color: #ff6347;
 }
 section#bestNew>div.btn>p:first-child {
   left: -96px;
