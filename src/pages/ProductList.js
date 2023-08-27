@@ -4,6 +4,7 @@ import ProductItem from "../components/ProductItem";
 import "../css/ProductList.css";
 
 import { BiSolidDownArrow } from "react-icons/bi";
+import { HiChevronDoubleLeft, HiChevronDoubleRight, HiChevronLeft, HiChevronRight } from "react-icons/hi";
 
 export default function ProductList() {
   return (
@@ -42,12 +43,23 @@ export default function ProductList() {
           <ProductItem />
           <ProductItem />
           <ProductItem />
-          <ProductItem />
+        
+          <div className="pageCount">
+            <p><i><HiChevronDoubleLeft /></i></p>
+            <p><i><HiChevronLeft /></i></p>
+
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+
+            <p><i><HiChevronRight /></i></p>
+            <p><i><HiChevronDoubleRight /></i></p>
+          </div>
         </div>
       </div>
 
       <ul>
-        <li className="menuNow"><Link to="">전체보기</Link></li>
+        <li><Link to="">전체보기</Link></li>
         <li><Link to="">서브메뉴</Link></li>
         <li><Link to="">서브메뉴</Link></li>
         <li><Link to="">서브메뉴</Link></li>
