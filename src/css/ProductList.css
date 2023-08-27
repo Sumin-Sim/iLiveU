@@ -1,0 +1,120 @@
+section.productList {
+  width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row-reverse; align-items: start;
+}
+section.productList>div {
+  width: calc(952px + 85px);
+  margin-left: 83px; padding-left: 83px;
+  border-left: 2px #eee solid;
+  box-sizing: border-box;
+}
+
+
+/* top text */
+section.productList>div>h3 {
+  margin: 128px 0 48px;
+  font: 900 32px/1 'Pretendard-Black', sans-serif; color: #ff6347;
+}
+section.productList>div>h3>span {
+  margin-left: 8px;
+  font: 200 24px/1 'Pretendard-ExtraLight', sans-serif; color: #ffaea0;
+}
+section.productList>div>h3>b {
+  margin-left: 32px; padding-left: 32px;
+  border-left: 4px #eee solid;
+  font: 200 16px/1 'Pretendard-ExtraLight', sans-serif; color: #000;
+}
+div.listTopText {
+  margin-bottom: 48px;
+  display: flex;
+  justify-content: space-between; align-items: center;
+}
+div.listTopText>p>b {
+  color: #ff6347;
+}
+div.listTopText>div.sortBtn {
+  width: 120px;
+  position: relative;
+  box-sizing: border-box;
+  border-bottom: 4px #eee solid;
+  font-size: 14px;
+}
+div.listTopText>div.sortBtn>p {
+  height: 32px;
+  padding: 0 8px 0 12px;
+  display: flex;
+  justify-content: space-between; align-items: center;
+}
+div.listTopText>div.sortBtn>p>i {
+  color: #ffaea0;
+}
+div.listTopText>div.sortBtn>ul {
+  width: 100%;
+  padding: 16px 11px;
+  display: none;
+  position: absolute;
+  top: 36px; left: 0;
+  box-sizing: border-box;
+  border: 1px #eee solid;
+  background-color: #fff;
+  z-index: 100;
+}
+div.listTopText>div.sortBtn>ul>li {
+  width: fit-content;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+div.listTopText>div.sortBtn>ul>li:last-child {
+  margin-bottom: 0;
+}
+div.listTopText>div.sortBtn>ul>li:hover {
+  color: #ff6347;
+}
+
+
+
+
+
+div.productList_content {
+  padding-bottom: 128px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div.productList_content a:nth-of-type(3n) figure {
+  margin-right: 0;
+}
+div.productList_content a:nth-last-of-type(-n+3) figure {
+  margin-bottom: 0;
+}
+
+
+
+/* submenu */
+section.productList>ul {
+  padding-top: 128px;
+  width: 160px;
+}
+section.productList>ul>li {
+  width: fit-content;
+  margin-bottom: 24px;
+  padding: 4px 0 4px 16px;
+  border-left: 4px #eee solid;
+}
+section.productList>ul>li:hover {
+  border-color: #ffaea0;
+}
+section.productList>ul>li:hover>a {
+  color: #ffaea0;
+}
+section.productList>ul>li>a {
+  color: #999;
+}
+section.productList>ul>li.menuNow {
+  border-color: #ff6347;
+}
+section.productList>ul>li.menuNow>a {
+  color: #ff6347;
+}
