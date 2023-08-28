@@ -10,7 +10,7 @@ import "../css/Liked.css";
 export default function Liked() {
   return (
     <section className="likedList">
-      <h3>관심상품 <span>Wish List</span></h3>
+      <h3>관심상품 <span>Liked Items</span></h3>
 
       <div className="listTopText">
         <p>총 <b>0개</b>의 제품이 관심상품에 등록되었습니다.</p>

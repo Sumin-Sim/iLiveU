@@ -92,11 +92,11 @@ section.likedList div.listTopText>div.sortBtn>ul>li:hover {
 
 /* deleteBtn */
 section.likedList button.deleteBtn {
-  margin-bottom: 48px; padding: 4px 16px;
+  margin-bottom: 48px; padding: 8px 16px;
   align-self: flex-start;
   border: none;
   background-color: #ff6347;
-  color: #fff;
+  font: 400 16px/1 'Pretendard-Regular', sans-serif; color: #fff;
   cursor: pointer;
 }
 section.likedList button.deleteBtn:hover {
