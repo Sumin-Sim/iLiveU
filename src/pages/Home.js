@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import menuData from "../assets/menu.json";
+import menuData from "../api/menu.json";
 
 import { FaChevronLeft, FaChevronRight, FaPlus } from "react-icons/fa";
 

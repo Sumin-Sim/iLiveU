@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import menuData from "../assets/menu.json";
+import menuData from "../api/menu.json";
 
 import { PiInstagramLogoFill } from "react-icons/pi";
 import { SiFacebook, SiNaver, SiYoutube } from "react-icons/si";
