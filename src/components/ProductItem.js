@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import { LiaHeart, LiaShoppingCartSolid } from "react-icons/lia";
+import { LiaHeart, LiaHeartSolid, LiaShoppingCartSolid } from "react-icons/lia";
 import { PiStarFill } from "react-icons/pi";
 import { RxOpenInNewWindow } from "react-icons/rx";
 
@@ -30,7 +30,8 @@ export default function ProductItem() {
             <dd>
               <ul>
                 <li><i><RxOpenInNewWindow /></i><span>상세페이지</span></li>
-                <li><i><LiaHeart /></i><span>관심상품</span></li>
+                <li><i><LiaHeart /></i><span>관심상품 등록</span></li>
+                <li className="likedOpposite"><i><LiaHeartSolid /></i><span>관심상품 삭제</span></li>
                 <li><i><LiaShoppingCartSolid /></i><span>장바구니</span></li>
               </ul>
             </dd>

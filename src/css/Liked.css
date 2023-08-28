@@ -1,0 +1,166 @@
+section.likedList {
+  width: 1280px;
+  margin: 128px auto;
+  display: flex;
+  flex-direction: column; align-items: center;
+}
+
+
+/* top text */
+section.likedList>h3 {
+  margin-bottom: 48px;
+  font: 900 32px/1 'Pretendard-Black', sans-serif; color: #ff6347;
+}
+section.likedList>h3>span {
+  margin-left: 8px;
+  font: 200 24px/1 'Pretendard-ExtraLight', sans-serif; color: #ffaea0;
+}
+section.likedList div.listTopText {
+  width: 1280px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between; align-items: center;
+  position: relative;
+}
+section.likedList div.listTopText>p>b {
+  color: #ff6347;
+}
+
+
+/* search */
+section.likedList form {
+  width: 400px; height: 24px;
+  position: absolute;
+  top: calc(50% - 12px); left: calc(50% - 200px);
+}
+section.likedList form>label {
+  position: absolute;
+  top: 4px; right: 8px;
+  color: #ffaea0;
+}
+section.likedList form>input {
+  width: 400px; height: 100%;
+  padding: 0px 32px 0 16px;
+  box-sizing: border-box;
+  border: 2px #eee solid;
+  border-radius: 12px;
+  outline-style: none;
+}
+
+
+/* div.sortBtn */
+section.likedList div.listTopText>div.sortBtn {
+  width: 120px;
+  position: relative;
+  box-sizing: border-box;
+  border-bottom: 4px #eee solid;
+  font-size: 14px;
+  cursor: pointer;
+}
+section.likedList div.listTopText>div.sortBtn>p {
+  height: 32px;
+  padding: 0 8px 0 12px;
+  display: flex;
+  justify-content: space-between; align-items: center;
+}
+section.likedList div.listTopText>div.sortBtn>p>i {
+  color: #ffaea0;
+}
+section.likedList div.listTopText>div.sortBtn>ul {
+  width: 100%;
+  padding: 16px 11px;
+  display: none;
+  position: absolute;
+  top: 36px; left: 0;
+  box-sizing: border-box;
+  border: 1px #eee solid;
+  background-color: #fff;
+  z-index: 100;
+}
+section.likedList div.listTopText>div.sortBtn>ul>li {
+  width: fit-content;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+section.likedList div.listTopText>div.sortBtn>ul>li:last-child {
+  margin-bottom: 0;
+}
+section.likedList div.listTopText>div.sortBtn>ul>li:hover {
+  color: #ff6347;
+}
+
+
+/* deleteBtn */
+section.likedList button.deleteBtn {
+  margin-bottom: 48px; padding: 4px 16px;
+  align-self: flex-start;
+  border: none;
+  background-color: #ff6347;
+  color: #fff;
+  cursor: pointer;
+}
+section.likedList button.deleteBtn:hover {
+  background-color: #000;
+}
+
+
+/* div.likedList_content */
+div.likedList_content {
+  display: flex;
+  flex-wrap: wrap;
+}
+div.likedList_content a:nth-of-type(4n) figure {
+  margin-right: 0;
+}
+div.likedList_content a:nth-last-of-type(-n+4) figure {
+  margin-bottom: 0;
+}
+
+
+/* div.pageCount */
+div.likedList_content>div.pageCount {
+  width: 1280px;
+  margin: 80px auto 0;
+  display: flex;
+  justify-content: center;
+}
+div.likedList_content>div.pageCount>div {
+  position: relative;
+}
+div.likedList_content>div.pageCount p {
+  position: absolute;
+  top: 0;
+  color: #ffaea0;
+  cursor: pointer;
+}
+div.likedList_content>div.pageCount p:hover {
+  color: #ff6347;
+}
+div.likedList_content>div.pageCount p:nth-of-type(1) {
+  left: -64px;
+}
+div.likedList_content>div.pageCount p:nth-of-type(2) {
+  left: -32px;
+}
+div.likedList_content>div.pageCount p:nth-of-type(3) {
+  right: -32px;
+}
+div.likedList_content>div.pageCount p:nth-of-type(4) {
+  right: -64px;
+}
+div.likedList_content>div.pageCount span {
+  width: 14px; height: 14px;
+  margin-right: 16px;
+  font-size: 14px; color: #999;
+  text-align: center;
+  cursor: pointer;
+}
+div.likedList_content>div.pageCount span:last-of-type {
+  margin: 0;
+}
+div.likedList_content>div.pageCount span:hover {
+  color: #ff6347;
+}
+div.likedList_content>div.pageCount span.pageNow {
+  color: #ff6347;
+}

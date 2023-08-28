@@ -10,7 +10,7 @@ export default function ProductList() {
   return (
     <section className="productList">
       <div>
-        <h3>카테고리명<span>영문명</span><b>서브메뉴</b></h3>
+        <h3>카테고리명 <span>영문명</span> <b>서브메뉴</b></h3>
 
         <div className="listTopText">
           <p>총 <b>0개</b>의 제품이 있습니다.</p>
@@ -45,15 +45,17 @@ export default function ProductList() {
           <ProductItem />
         
           <div className="pageCount">
-            <p><i><HiChevronDoubleLeft /></i></p>
-            <p><i><HiChevronLeft /></i></p>
+            <div>
+              <p><i><HiChevronDoubleLeft /></i></p>
+              <p><i><HiChevronLeft /></i></p>
 
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
 
-            <p><i><HiChevronRight /></i></p>
-            <p><i><HiChevronDoubleRight /></i></p>
+              <p><i><HiChevronRight /></i></p>
+              <p><i><HiChevronDoubleRight /></i></p>
+            </div>
           </div>
         </div>
       </div>

@@ -26,34 +26,35 @@ section.productList>div>h3>b {
   border-left: 4px #eee solid;
   font: 200 16px/1 'Pretendard-ExtraLight', sans-serif; color: #000;
 }
-div.listTopText {
+section.productList div.listTopText {
   margin-bottom: 48px;
   display: flex;
   justify-content: space-between; align-items: center;
 }
-div.listTopText>p>b {
+section.productList div.listTopText>p>b {
   color: #ff6347;
 }
 
 
 /* div.sortBtn */
-div.listTopText>div.sortBtn {
+section.productList div.listTopText>div.sortBtn {
   width: 120px;
   position: relative;
   box-sizing: border-box;
   border-bottom: 4px #eee solid;
   font-size: 14px;
+  cursor: pointer;
 }
-div.listTopText>div.sortBtn>p {
+section.productList div.listTopText>div.sortBtn>p {
   height: 32px;
   padding: 0 8px 0 12px;
   display: flex;
   justify-content: space-between; align-items: center;
 }
-div.listTopText>div.sortBtn>p>i {
+section.productList div.listTopText>div.sortBtn>p>i {
   color: #ffaea0;
 }
-div.listTopText>div.sortBtn>ul {
+section.productList div.listTopText>div.sortBtn>ul {
   width: 100%;
   padding: 16px 11px;
   display: none;
@@ -64,15 +65,15 @@ div.listTopText>div.sortBtn>ul {
   background-color: #fff;
   z-index: 100;
 }
-div.listTopText>div.sortBtn>ul>li {
+section.productList div.listTopText>div.sortBtn>ul>li {
   width: fit-content;
   margin-bottom: 16px;
   cursor: pointer;
 }
-div.listTopText>div.sortBtn>ul>li:last-child {
+section.productList div.listTopText>div.sortBtn>ul>li:last-child {
   margin-bottom: 0;
 }
-div.listTopText>div.sortBtn>ul>li:hover {
+section.productList div.listTopText>div.sortBtn>ul>li:hover {
   color: #ff6347;
 }
 
@@ -93,46 +94,49 @@ div.productList_content a:nth-last-of-type(-n+3) figure {
 
 /* div.pageCount */
 div.productList_content>div.pageCount {
-  margin: 48px auto 0;
+  width: calc(952px + 85px);
+  margin: 80px auto 0;
   display: flex;
   justify-content: center;
+}
+div.productList_content>div.pageCount>div {
   position: relative;
 }
-div.productList_content>div.pageCount>p {
+div.productList_content>div.pageCount p {
   position: absolute;
-  top: -1px;
+  top: 0;
   color: #ffaea0;
   cursor: pointer;
 }
-div.productList_content>div.pageCount>p:hover {
+div.productList_content>div.pageCount p:hover {
   color: #ff6347;
 }
-div.productList_content>div.pageCount>p:nth-of-type(1) {
-  left: -48px;
+div.productList_content>div.pageCount p:nth-of-type(1) {
+  left: -64px;
 }
-div.productList_content>div.pageCount>p:nth-of-type(2) {
-  left: -24px;
+div.productList_content>div.pageCount p:nth-of-type(2) {
+  left: -32px;
 }
-div.productList_content>div.pageCount>p:nth-of-type(3) {
-  right: -24px;
+div.productList_content>div.pageCount p:nth-of-type(3) {
+  right: -32px;
 }
-div.productList_content>div.pageCount>p:nth-of-type(4) {
-  right: -48px;
+div.productList_content>div.pageCount p:nth-of-type(4) {
+  right: -64px;
 }
-div.productList_content>div.pageCount>span {
+div.productList_content>div.pageCount span {
   width: 14px; height: 14px;
   margin-right: 16px;
   font-size: 14px; color: #999;
   text-align: center;
   cursor: pointer;
 }
-div.productList_content>div.pageCount>span:last-of-type {
+div.productList_content>div.pageCount span:last-of-type {
   margin: 0;
 }
-div.productList_content>div.pageCount>span:hover {
+div.productList_content>div.pageCount span:hover {
   color: #ff6347;
 }
-section.productList div.pageCount>span.pageNow {
+section.productList>div.pageCount span.pageNow {
   color: #ff6347;
 }
 
