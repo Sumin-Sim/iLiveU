@@ -1,0 +1,31 @@
+section.notFound {
+  width: 100vw; height: 100%;
+  position: absolute;
+  top: 0; left: 0;
+  background-color: #fff;
+  z-index: 900;
+}
+section.notFound>div {
+  width: fit-content;
+  margin: 64px auto;
+  display: flex;
+  flex-direction: column; justify-content: center; align-items: center;
+}
+section.notFound i {
+  font-size: 48px; color: #ff6347;
+}
+section.notFound h3 {
+  margin-bottom: 32px;
+  font: 900 24px/1 'Pretendard-Black', sans-serif;
+}
+section.notFound p {
+  margin-bottom: 80px;
+  font-size: 14px; color: #999;
+  text-align: center;
+}
+section.notFound a {
+  padding: 16px 32px;
+  border-radius: 24px;
+  background-color: #ff6347;
+  font: 900 16px/1 'Pretendard-Black', sans-serif; color: #fff;
+}

@@ -97,7 +97,7 @@ div.wishList_mainBox {
   width: 1280px;
   margin-top: 80px;
   display: flex;
-  justify-content: space-between; align-items: start;
+  justify-content: space-between; align-items: flex-start;
 }
 
 
@@ -329,7 +329,7 @@ div.totalPrice {
   width: 280px;
   padding-bottom: 32px;
   display: flex;
-  flex-direction: column; justify-content: center; align-items: start;
+  flex-direction: column; justify-content: center; align-items: flex-start;
   box-sizing: border-box;
   border: 2px #ffaea0 solid;
 }

@@ -2,7 +2,7 @@ section.productList {
   width: 1280px;
   margin: 0 auto;
   display: flex;
-  flex-direction: row-reverse; align-items: start;
+  flex-direction: row-reverse; align-items: flex-start;
 }
 section.productList>div {
   width: calc(952px + 85px);
