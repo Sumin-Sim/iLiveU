@@ -208,10 +208,11 @@ function CategoryMenu() {
     if(menuData[i].subMenu.length > 1) {
       const subMenu = menuData[i].subMenu;
       for(let i = 0 ; i < subMenu.length ; i ++) {
+        const newid = subMenu[i].id;
         const newtitle = subMenu[i].title;
         const newImg = subMenu[i].imgSrc;
 
-        const newMenu = {"id": [i], "title": newtitle, "imgSrc": newImg}
+        const newMenu = {"id": newid, "title": newtitle, "imgSrc": newImg}
 
         subMenuList = [...subMenuList, newMenu];
       }
