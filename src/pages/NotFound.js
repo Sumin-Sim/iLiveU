@@ -14,6 +14,8 @@ export default function NotFound() {
           요청하신 페이지의 주소가 변경, 삭제되어 찾을 수 없습니다.
         </p>
         <Link to ="/">홈으로 돌아가기</Link>
+
+        <small>Copyright &copy; 2023 아이리브유 All Rights Reserved.</small>
       </div>
     </section>
   );

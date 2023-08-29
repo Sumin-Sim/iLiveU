@@ -24,8 +24,12 @@ section.notFound p {
   text-align: center;
 }
 section.notFound a {
-  padding: 16px 32px;
+  margin-bottom: 160px; padding: 16px 32px;
   border-radius: 24px;
   background-color: #ff6347;
   font: 900 16px/1 'Pretendard-Black', sans-serif; color: #fff;
+}
+section.notFound small {
+  font-size: 14px;
+  color: #999;
 }
