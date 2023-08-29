@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 
-import { FaCheck } from "react-icons/fa";
+import { FaCheck, FaMinus, FaPlus } from "react-icons/fa";
 
 export default function WishListItem() {
   return (
     <li>
       <ul>
-        <li>
+        <li className="checkBoxInput">
           <label className="hide">상품 선택</label>
           <span><i><FaCheck /></i></span>
           <input type="checkbox" />
@@ -35,7 +35,9 @@ export default function WishListItem() {
         </li>
 
         <li>
-          <input type="number" min={1} />
+          <button type="button"><i><FaMinus /></i></button>
+          <input type="text" placeholder="1"/>
+          <button type="button"><i><FaPlus /></i></button>
         </li>
 
         <li>990,000원</li>
