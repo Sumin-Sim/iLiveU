@@ -10,7 +10,6 @@ import MyPage from "./pages/MyPage";
 import WishList from "./pages/WishList";
 import Liked from "./pages/Liked";
 import Search from "./pages/Search";
-import CustomerSupport from "./pages/CustomerSupport";
 import NotFound from "./pages/NotFound";
 
 export default function Main() {
@@ -29,7 +28,6 @@ export default function Main() {
           <Route path="wishList" element={<WishList />} />
           <Route path="liked" element={<Liked/>} />
           <Route path="search" element={<Search/>} />
-          <Route path="support" element={<CustomerSupport/>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </App>

@@ -16,7 +16,9 @@ figure.productItem img {
 /* title */
 figure.productItem dt {
   margin-bottom: 12px;
+  overflow: hidden;
   font: 600 20px/1 'Pretendard-SemiBold', sans-serif;
+  text-overflow: ellipsis; white-space: nowrap;
 }
 
 

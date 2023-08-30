@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 import { BiSupport } from "react-icons/bi";
-import { FaArrowRight } from "react-icons/fa6";
 
 import "../css/Footer.css";
 
@@ -24,7 +23,6 @@ export default function Footer() {
             오후 12:00 ~ 오후 01:00
           </dd>
           <dd>주말 및 공휴일 휴무</dd>
-          <dd><Link to="support">온라인 고객센터<i><FaArrowRight /></i></Link></dd>
         </dl>
 
         <div>

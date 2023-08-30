@@ -21,7 +21,7 @@ footer>div>p {
 
 /* customer support */
 footer>div>dl {
-  width: 320px; height: 100%;
+  width: 320px;
   padding: 24px;
   position: absolute;
   top: 0; right: 0;
@@ -69,30 +69,9 @@ footer>div>dl>dd>dfn {
   margin-right: 8px;
   font: 600 14px/1 'Pretendard-SemiBold', sans-serif;
 }
-footer>div>dl>dd:nth-last-of-type(2) {
+footer>div>dl>dd:last-child {
   margin: 0;
   font-size: 14px; color: #999;
-}
-footer>div>dl>dd:last-of-type {
-  margin: 0;
-  position: absolute;
-  bottom: 24px; right: 24px;
-  border: 1px #ffaea0 solid;
-}
-footer>div>dl>dd:last-of-type a {
-  padding: 4px 36px 4px 16px;
-  display: block;
-  color: #ffaea0;
-}
-footer>div>dl>dd:last-of-type i {
-  position: absolute;
-  top: 4px; right: 16px;
-}
-footer>div>dl>dd:last-of-type:hover {
-  background-color: #ffaea0;
-}
-footer>div>dl>dd:last-of-type:hover>a {
-  color: #fff;
 }
 
 
