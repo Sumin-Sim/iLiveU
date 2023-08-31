@@ -70,14 +70,3 @@ font-family: 'Pretendard-Black', sans-serif; font-weight: 900;
 /* font-family: 'Cinzel', serif; font-weight: 600; */
 /* font-family: 'Cinzel', serif; font-weight: 900; */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&display=swap');
-
-
-
-
-/* font-family: 'Chosunilbo_myungjo', serif; font-weight: normal; */
-@font-face {
-    font-family: 'Chosunilbo_myungjo';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
