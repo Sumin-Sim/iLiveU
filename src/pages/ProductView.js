@@ -1,7 +1,6 @@
-import { BiSolidDownArrow } from "react-icons/bi";
 import { LiaHeart, LiaHeartSolid } from "react-icons/lia";
 import { PiStarFill } from "react-icons/pi";
-import { FaChevronLeft, FaChevronRight, FaMinus, FaPlus } from "react-icons/fa";
+import { FaChevronDown, FaChevronLeft, FaChevronRight, FaMinus, FaPlus } from "react-icons/fa";
 
 import "../css/ProductView.css";
 import { Link } from "react-router-dom";
@@ -54,7 +53,7 @@ export default function ProductView() {
             <dl>
               <dt>옵션명</dt>
               <dd>
-                <p>옵션내용<i><BiSolidDownArrow /></i></p>
+                <p>옵션내용<i><FaChevronDown /></i></p>
 
                 <ul>
                   <li>옵션1</li>
@@ -81,16 +80,18 @@ export default function ProductView() {
               <dd>99,999원</dd>
             </dl>
 
-            <p><i><LiaHeart /></i><span>관심상품 등록</span></p>
-            <p className="likedOpposite"><i><LiaHeartSolid /></i><span>관심상품 삭제</span></p>
-            <button type="button">장바구니</button>
-            <button type="button">바로구매</button>
+            <div className="buyIcon">
+              <p className="liked"><i><LiaHeart /></i></p>
+              <p className="liked likedOpposite"><i><LiaHeartSolid /></i></p>
+              <button type="button">장바구니</button>
+              <button type="button">바로구매</button>
+            </div>
           </div>
         </figcaption>
       </figure>
 
       <div className="reviewList">
-        <h4 className="hide">구매후기</h4>
+        <h4>구매후기</h4>
         <ReviewList />
         <ReviewList />
         <ReviewList />
@@ -110,8 +111,21 @@ function ReviewList() {
           <dt>review title</dt>
 
           <dd>
-            <span><i><PiStarFill /></i>5.0</span>
-            &#40;9,999&#41;
+            <p>
+              <i><PiStarFill /></i>
+              <i><PiStarFill /></i>
+              <i><PiStarFill /></i>
+              <i><PiStarFill /></i>
+              <i><PiStarFill /></i>
+            </p>
+            <p>
+              <i><PiStarFill /></i>
+              <i><PiStarFill /></i>
+              <i><PiStarFill /></i>
+              <i><PiStarFill /></i>
+              <i><PiStarFill /></i>
+            </p>
+            5.0
           </dd>
           <dd>review text. review text. review text. review text. review text. review text. review text. review text. review text. review text. review text. review text. review text. review text. review text. review text. review text. review text. review text. review text. review text. review text.</dd>
           <dd>2000.01.01</dd>

@@ -6,9 +6,6 @@ figure.mainReview {
   background-color: #fff;
   box-shadow: 0 0 8px #999;
 }
-figure.mainReview:hover div>p {
-  color: #ff6347;
-}
 figure.mainReview>img {
   width: 100%; height: 400px;
 }
@@ -58,6 +55,9 @@ figure.mainReview div {
   display: flex;
   align-items: center;
   position: relative;
+}
+figure.mainReview div:hover>p {
+  color: #ff6347;
 }
 figure.mainReview div>img {
   width: 80px; height: 80px;
