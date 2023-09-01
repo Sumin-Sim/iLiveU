@@ -6,25 +6,26 @@ import { HiMiniBars3 } from "react-icons/hi2";
 
 import "../css/ProductItem.css";
 
-export default function ProductItem() {
+export default function ProductItem({ course }) {
   return (
-    <Link to="">
+    <Link to={course.slug}>
       <figure className="productItem">
-        <img src="./img/productItem.png" alt="상품 이미지" />
+        <img src={course.imgSrc} alt={course.title} />
 
         <figcaption>
           <dl>
-            <dt>상품명 상품 이름</dt>
+            <dt>{course.title}</dt>
 
             <dd>
-              <ins>99,000원</ins>
-              <del>999,000원</del>
-              <span>456%</span>
+              <PriceShow
+                course={course}
+              />
             </dd>
 
             <dd>
-              <dfn><i><PiStarFill /></i>5.0</dfn>
-              &#40;9,999&#41;
+              <ReviewShow
+                course={course}
+              />
             </dd>
 
             <dd>
@@ -39,5 +40,60 @@ export default function ProductItem() {
         </figcaption>
       </figure>
     </Link>
+  );
+}
+
+
+function PriceShow({ course }) {
+  const price = course.price;
+  const discountedPrice = course.discountedPrice;
+
+
+  // del
+  function priceCompare() {
+    if(price !== discountedPrice) {
+      return <del>{Number(price).toLocaleString()}원</del>
+    }
+  }
+
+  
+  // discountRate
+  function discountRate() {
+    const result = ((price - discountedPrice) / price) * 100;
+
+    if(price !== discountedPrice) {
+      return <span>{Math.round(Number(result))}&#37;</span>;
+    }
+  }
+
+  
+  return (
+    <>
+    <ins>{Number(discountedPrice).toLocaleString()}원</ins>
+    {priceCompare()}
+    {discountRate()}
+    </>
+  );
+}
+
+
+function ReviewShow({ course }) {
+  let allRate = 0;
+
+  function averageRate() {
+    for(let i in course.review) {
+      allRate = allRate + course.review[i].rating;
+    }
+
+    const resultRate = allRate / course.review.length;
+
+    return resultRate.toFixed(1);
+  }
+
+  return (
+    <>
+    <dfn><i><PiStarFill /></i>{averageRate()}</dfn>
+    &#40;{course.review.length}&#41;
+    </>
   );
 }

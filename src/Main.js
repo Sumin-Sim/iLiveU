@@ -18,7 +18,7 @@ export default function Main() {
       <App>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="product">
+          <Route path=":courseSlug">
             <Route index element={<ProductList />} />
             <Route path=":courseSlug" element={<ProductView />} />
           </Route>

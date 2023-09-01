@@ -43,7 +43,7 @@ export default function Header() {
           {
           menuData.map((menu) => (
             <li key={menu.id}>
-              <Link to="">{menu.title}</Link>
+              <Link to={menu.slug}>{menu.title}</Link>
               <SubMenu
                 menu = {menu}
                 subMenu = {menu.subMenu}
@@ -66,7 +66,7 @@ function SubMenu({ menu, subMenu }) {
         {
         subMenu.map((subMenu) => (
           <li key={subMenu.id}>
-            <Link to="">{subMenu.title}</Link>
+            <Link to={subMenu.slug}>{subMenu.title}</Link>
           </li>
         ))
         }

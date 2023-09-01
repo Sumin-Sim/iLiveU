@@ -1,28 +1,34 @@
+import { Link, useParams } from "react-router-dom";
+import { getCourseBySlug } from "../api/api";
+
 import { LiaHeart, LiaHeartSolid } from "react-icons/lia";
 import { PiStarFill } from "react-icons/pi";
 import { FaChevronDown, FaChevronLeft, FaChevronRight, FaRegClock, FaMinus, FaPlus } from "react-icons/fa";
 
 import "../css/ProductView.css";
-import { Link } from "react-router-dom";
 
 export default function ProductView() {
+  const { courseSlug } = useParams();
+  const course = getCourseBySlug(courseSlug);
+
   return (
     <section className="productView">
       <h3 className="hide">상세페이지</h3>
 
       <figure className="productDetail">
         <div>
-          <span><img src="../img/productItem.png" alt="상품 이미지" /></span>
+          <span><img src={"." + course.imgSrc[0]} alt="상품 이미지" /></span>
 
           <ul>
-            <li><img src="../img/productItem.png" alt="상품 이미지" /></li>
-            <li><img src="../img/productItem.png" alt="상품 이미지" /></li>
-            <li><img src="../img/productItem.png" alt="상품 이미지" /></li>
-            <li><img src="../img/productItem.png" alt="상품 이미지" /></li>
-            <li><img src="../img/productItem.png" alt="상품 이미지" /></li>
-            <li><img src="../img/productItem.png" alt="상품 이미지" /></li>
-            <li><img src="../img/productItem.png" alt="상품 이미지" /></li>
-            <li><img src="../img/productItem.png" alt="상품 이미지" /></li>
+            {/* {map} */}
+            <li><img src={"." + course.imgSrc} alt="상품 이미지" /></li>
+            <li><img src={"." + course.imgSrc} alt="상품 이미지" /></li>
+            <li><img src={"." + course.imgSrc} alt="상품 이미지" /></li>
+            <li><img src={"." + course.imgSrc} alt="상품 이미지" /></li>
+            <li><img src={"." + course.imgSrc} alt="상품 이미지" /></li>
+            <li><img src={"." + course.imgSrc} alt="상품 이미지" /></li>
+            <li><img src={"." + course.imgSrc} alt="상품 이미지" /></li>
+            <li><img src={"." + course.imgSrc} alt="상품 이미지" /></li>
           </ul>
 
           <div className="btn">
@@ -33,8 +39,8 @@ export default function ProductView() {
 
         <figcaption>
           <p><Link to="">카테고리</Link><span><Link to="">소분류</Link></span></p>
-          <h4>상품명 상품 이름</h4>
-          <span>상품 설명</span>
+          <h4>{course.title}</h4>
+          <span>{course.summary}</span>
 
           <ul>
             <li>
