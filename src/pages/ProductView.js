@@ -1,6 +1,6 @@
 import { LiaHeart, LiaHeartSolid } from "react-icons/lia";
 import { PiStarFill } from "react-icons/pi";
-import { FaChevronDown, FaChevronLeft, FaChevronRight, FaMinus, FaPlus } from "react-icons/fa";
+import { FaChevronDown, FaChevronLeft, FaChevronRight, FaRegClock, FaMinus, FaPlus } from "react-icons/fa";
 
 import "../css/ProductView.css";
 import { Link } from "react-router-dom";
@@ -92,6 +92,13 @@ export default function ProductView() {
 
       <div className="reviewList">
         <h4>구매후기</h4>
+
+        <ul className="sortBtn">
+          <li><i><FaRegClock /></i><b>최신 리뷰순</b></li>
+          <li><span></span></li>
+          <li><i><PiStarFill /></i><b>높은 별점순</b></li>
+        </ul>
+
         <ReviewList />
         <ReviewList />
         <ReviewList />

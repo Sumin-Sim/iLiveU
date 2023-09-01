@@ -282,6 +282,33 @@ div.reviewList>h4 {
 div.reviewList>figure:last-child {
   margin: 0;
 }
+div.reviewList>ul.sortBtn {
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: flex-end; align-items: center;
+}
+div.reviewList>ul.sortBtn>li {
+  padding-left: 20px;
+  position: relative;
+  cursor: pointer;
+}
+div.reviewList>ul.sortBtn>li:nth-child(2) {
+  padding: 0;
+  cursor: initial;
+}
+div.reviewList>ul.sortBtn>li:hover {
+  color: #ff6347;
+}
+div.reviewList>ul.sortBtn>li>span {
+  width: 4px; height: 16px;
+  margin: 0 32px;
+  display: inline-block;
+  background-color: #eee;
+}
+div.reviewList>ul.sortBtn>li>i {
+  position: absolute;
+  top: 0; left: 0;
+}
 
 
 /* figure.productReview */
