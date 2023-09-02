@@ -53,10 +53,6 @@ export default function MyPage() {
           </h4>
           
           <div>
-            <ProductItem />
-            <ProductItem />
-            <ProductItem />
-            <ProductItem />
           </div>
         </div>
     </section>

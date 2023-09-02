@@ -59,36 +59,36 @@ export default function Home() {
       <div className="bestNew_ItemList">
         <div>
           <ul>
-            <li><ProductItem /></li>
-            <li><ProductItem /></li>
-            <li><ProductItem /></li>
-            <li><ProductItem /></li>
-            <li><ProductItem /></li>
-            <li><ProductItem /></li>
-            <li><ProductItem /></li>
-            <li><ProductItem /></li>
+            <li>{/* <ProductItem /> */}</li>
+            <li>{/* <ProductItem /> */}</li>
+            <li>{/* <ProductItem /> */}</li>
+            <li>{/* <ProductItem /> */}</li>
+            <li>{/* <ProductItem /> */}</li>
+            <li>{/* <ProductItem /> */}</li>
+            <li>{/* <ProductItem /> */}</li>
+            <li>{/* <ProductItem /> */}</li>
           </ul>
 
           <ul>
-            <li><ProductItem /></li>
-            <li><ProductItem /></li>
-            <li><ProductItem /></li>
-            <li><ProductItem /></li>
-            <li><ProductItem /></li>
-            <li><ProductItem /></li>
-            <li><ProductItem /></li>
-            <li><ProductItem /></li>
+            <li>{/* <ProductItem /> */}</li>
+            <li>{/* <ProductItem /> */}</li>
+            <li>{/* <ProductItem /> */}</li>
+            <li>{/* <ProductItem /> */}</li>
+            <li>{/* <ProductItem /> */}</li>
+            <li>{/* <ProductItem /> */}</li>
+            <li>{/* <ProductItem /> */}</li>
+            <li>{/* <ProductItem /> */}</li>
           </ul>
           
           <ul>
-            <li><ProductItem /></li>
-            <li><ProductItem /></li>
-            <li><ProductItem /></li>
-            <li><ProductItem /></li>
-            <li><ProductItem /></li>
-            <li><ProductItem /></li>
-            <li><ProductItem /></li>
-            <li><ProductItem /></li>
+            <li>{/* <ProductItem /> */}</li>
+            <li>{/* <ProductItem /> */}</li>
+            <li>{/* <ProductItem /> */}</li>
+            <li>{/* <ProductItem /> */}</li>
+            <li>{/* <ProductItem /> */}</li>
+            <li>{/* <ProductItem /> */}</li>
+            <li>{/* <ProductItem /> */}</li>
+            <li>{/* <ProductItem /> */}</li>
           </ul>
         </div>
       </div>

@@ -43,12 +43,12 @@ figure.productItem dd:nth-of-type(2) {
   color: #999;
   text-align: right;
 }
-figure.productItem dd:nth-of-type(2)>dfn {
+figure.productItem dd:nth-of-type(2)>span {
   margin-right: 4px;
   position: relative;
   color: #000;
 }
-figure.productItem dd:nth-of-type(2)>dfn>i {
+figure.productItem dd:nth-of-type(2)>span>i {
   position: absolute;
   top: 0; left: -16px;
   color: #ff6347;

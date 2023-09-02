@@ -1,15 +1,21 @@
 import { Link, useParams } from "react-router-dom";
 import { getCourseBySlug } from "../api/api";
 
+import { priceShow, reviewShow } from "../api/api";
+
 import { LiaHeart, LiaHeartSolid } from "react-icons/lia";
 import { PiStarFill } from "react-icons/pi";
 import { FaChevronDown, FaChevronLeft, FaChevronRight, FaRegClock, FaMinus, FaPlus } from "react-icons/fa";
 
 import "../css/ProductView.css";
+import { useEffect, useState } from "react";
 
 export default function ProductView() {
   const { courseSlug } = useParams();
   const course = getCourseBySlug(courseSlug);
+
+  // price
+  const [itemPrice, setItemPrice] = useState(course.discountedPrice);
 
   return (
     <section className="productView">
@@ -17,18 +23,13 @@ export default function ProductView() {
 
       <figure className="productDetail">
         <div>
-          <span><img src={"." + course.imgSrc[0]} alt="상품 이미지" /></span>
+          <span><img src={"." + course.imgSrc[0]} alt={course.title} /></span>
 
           <ul>
-            {/* {map} */}
-            <li><img src={"." + course.imgSrc} alt="상품 이미지" /></li>
-            <li><img src={"." + course.imgSrc} alt="상품 이미지" /></li>
-            <li><img src={"." + course.imgSrc} alt="상품 이미지" /></li>
-            <li><img src={"." + course.imgSrc} alt="상품 이미지" /></li>
-            <li><img src={"." + course.imgSrc} alt="상품 이미지" /></li>
-            <li><img src={"." + course.imgSrc} alt="상품 이미지" /></li>
-            <li><img src={"." + course.imgSrc} alt="상품 이미지" /></li>
-            <li><img src={"." + course.imgSrc} alt="상품 이미지" /></li>
+            {
+            course.imgSrc.map((item, index) => (
+              <li key={index}><img src={"." + item} alt={course.title + " " + [index] + "번 이미지"} /></li>
+            ))}
           </ul>
 
           <div className="btn">
@@ -38,37 +39,39 @@ export default function ProductView() {
         </div>
 
         <figcaption>
-          <p><Link to="">카테고리</Link><span><Link to="">소분류</Link></span></p>
+          <p><Link to={"../../" + course.category.majorClass.slug}>{course.category.majorClass.title}</Link><span><Link to={"../../" + course.category.minorClass.slug}>{course.category.minorClass.title}</Link></span></p>
           <h4>{course.title}</h4>
           <span>{course.summary}</span>
 
           <ul>
             <li>
-              <span><i><PiStarFill /></i>5.0</span>
-              &#40;9,999&#41;
+              {reviewShow(course)}
             </li>
 
             <li>
-              <ins>99,000원</ins>
-              <del>999,000원</del>
-              <span>456%</span>
+              {priceShow(course)}
             </li>
           </ul>
 
           <div className="productOption">
-            <dl>
-              <dt>옵션명</dt>
-              <dd>
-                <p>옵션내용<i><FaChevronDown /></i></p>
+            {
+            course.option.map((option) => (
+              <dl key={option.id}>
+                <dt>{option.title}</dt>
+                <dd>
+                  <p><b>옵션 내용</b><i><FaChevronDown /></i></p>
 
-                <ul>
-                  <li>옵션1</li>
-                  <li>옵션2</li>
-                  <li>옵션3</li>
-                  <li>옵션4</li>
-                </ul>
-              </dd>
-            </dl>
+                  <ul>
+                    {
+                    option.choice.map((choice) => (
+                      <li key={choice.id}>{choice.content}</li>
+                    ))
+                    }
+                  </ul>
+                </dd>
+              </dl>
+            ))
+            }
             
             <dl className="productCount">
               <dt>수량</dt>
@@ -83,7 +86,7 @@ export default function ProductView() {
           <div className="buy">
             <dl>
               <dt>총 주문 금액</dt>
-              <dd>99,999원</dd>
+              <dd>{itemPrice.toLocaleString()}원</dd>
             </dl>
 
             <div className="buyIcon">
@@ -105,46 +108,69 @@ export default function ProductView() {
           <li><i><PiStarFill /></i><b>높은 별점순</b></li>
         </ul>
 
-        <ReviewList />
-        <ReviewList />
-        <ReviewList />
+        {
+        course.review.map((review) => (
+          <ReviewList
+            key={review.id}
+            review={review}
+          />
+        ))
+        }
       </div>
     </section>
   );
 }
 
 
-function ReviewList() {
-  return (
-    <figure className="productReview">
-      <img src="../img/productItem.png" alt="상품 이미지" />
+function ReviewList({ review }) {
+  // review star width
+  useEffect(() => {
+    const star = document.getElementsByClassName(review.id);
+    if(star) {star[0].style.width=`${review.rating * 24}px`}
+  })
 
-      <figcaption>
+  return (
+    <figure className="productReview"><figcaption>
         <dl>
-          <dt>review title</dt>
+          <dt>{review.title}</dt>
 
           <dd>
+            {review.rating.toFixed(1)}
+            
             <p>
               <i><PiStarFill /></i>
               <i><PiStarFill /></i>
               <i><PiStarFill /></i>
               <i><PiStarFill /></i>
               <i><PiStarFill /></i>
-            </p>
-            <p>
+            </p> 
+            <p className={review.id}>
               <i><PiStarFill /></i>
               <i><PiStarFill /></i>
               <i><PiStarFill /></i>
               <i><PiStarFill /></i>
               <i><PiStarFill /></i>
             </p>
-            5.0
           </dd>
-          <dd>review text. review text. review text. review text. review text. review text. review text. review text. review text. review text. review text. review text. review text. review text. review text. review text. review text. review text. review text. review text. review text. review text.</dd>
-          <dd>2000.01.01</dd>
-          <dd>userId</dd>
+          <dd>{review.content}</dd>
+          <dd>{review.reportingDate}</dd>
+          <dd>{userIdHide(review.userId)}</dd>
         </dl>
       </figcaption>
+      
+      {imgShow(review)}
     </figure>
   );
+}
+
+
+function userIdHide(userId) {
+  return userId
+}
+
+
+function imgShow(review) {
+  if(review.imgSrc !== "") {
+    return <img src={"." + review.imgSrc} alt={review.id + " 이미지"} />
+  }
 }
