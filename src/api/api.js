@@ -12,6 +12,8 @@ export function getCourseBySlug(courseSlug) {
 }
 
 
+
+
 // item Info
 export function priceShow(course) {
   const price = course.price;

@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import { getCourseBySlug } from "../api/api";
+import { useEffect, useState } from "react";
 
 import { priceShow, reviewShow } from "../api/api";
 
@@ -8,7 +9,6 @@ import { PiStarFill } from "react-icons/pi";
 import { FaChevronDown, FaChevronLeft, FaChevronRight, FaRegClock, FaMinus, FaPlus } from "react-icons/fa";
 
 import "../css/ProductView.css";
-import { useEffect, useState } from "react";
 
 export default function ProductView() {
   const { courseSlug } = useParams();
