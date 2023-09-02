@@ -3,8 +3,9 @@ import courses from "./data.json";
 import { PiStarFill } from "react-icons/pi";
 
 // course
-export function getCourse() {
-  return courses;
+export function getCourse(courseSlug) {
+  console.log(courseSlug)
+  return courses.filter((course) => course.category.majorClass.slug === courseSlug || course.category.minorClass.slug === courseSlug);
 }
 
 export function getCourseBySlug(courseSlug) {

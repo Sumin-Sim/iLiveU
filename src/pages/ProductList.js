@@ -9,8 +9,8 @@ import { BiSolidDownArrow } from "react-icons/bi";
 import { HiChevronDoubleLeft, HiChevronDoubleRight, HiChevronLeft, HiChevronRight } from "react-icons/hi";
 
 export default function ProductList() {
-  const courses = getCourse();
   const { courseSlug } = useParams();
+  const courses = getCourse(courseSlug);
 
   return (
     <section className="productList">
