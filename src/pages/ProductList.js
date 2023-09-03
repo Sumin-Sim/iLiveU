@@ -3,6 +3,8 @@ import ProductItem from "../components/ProductItem";
 
 import { getCourse } from "../api/api";
 
+import menuData from "../api/menu.json";
+
 import "../css/ProductList.css";
 
 import { BiSolidDownArrow } from "react-icons/bi";
@@ -61,12 +63,9 @@ export default function ProductList() {
       </div>
 
       <ul>
-        <li><Link to="">전체보기</Link></li>
-        <li><Link to="">서브메뉴</Link></li>
-        <li><Link to="">서브메뉴</Link></li>
-        <li><Link to="">서브메뉴</Link></li>
-        <li><Link to="">서브메뉴</Link></li>
-        <li><Link to="">서브메뉴</Link></li>
+        <AsideCategory
+          courseSlug={courseSlug}
+        />
       </ul>
     </section>
   );
@@ -75,62 +74,15 @@ export default function ProductList() {
 
 function ProductListTitle({ courseSlug }) {
   function titleKo() {
-    switch(courseSlug) {
-      case "tableware":
-      case "dish":
-      case "bowl":
-      case "spoon":
-      case "cup":
-      case "bottle":
-        return "식기";
-      case "kitchen":
-      case "tool":
-      case "item":
-        return "주방";
-      case "tabledeco":
-      case "tray":
-      case "cloth":
-      case "coaster":
-        return "테이블 장식";
-      case "etc":
-      case "lunchbox":
-      case "foodtray":
-        return "기타 상품";
-      case "new":
-        return "신상품";
-      case "onsale":
-        return "할인상품";
-    }
+    let findCategory = menuData.find((menu) => menu.slug === courseSlug);
+
+    console.log(findCategory)
   }
 
 
   function titleEng() {
-    switch(courseSlug) {
-      case "tableware":
-      case "dish":
-      case "bowl":
-      case "spoon":
-      case "cup":
-      case "bottle":
-        return "Tableware";
-      case "kitchen":
-      case "tool":
-      case "item":
-        return "Kitchen";
-      case "tabledeco":
-      case "tray":
-      case "cloth":
-      case "coaster":
-        return "Table Deco";
-      case "etc":
-      case "lunchbox":
-      case "foodtray":
-        return "ETC";
-      case "new":
-        return "New";
-      case "onsale":
-        return "On Sale";
-    }
+    /* const findCategory = menuData.find((item) => item.slug == courseSlug || item.subMenu.slug == courseSlug);
+    return findCategory.title; */
   }
 
 
@@ -147,14 +99,15 @@ function ProductListTitle({ courseSlug }) {
       case "bowl": return <b>다용도볼</b>;
       case "spoon": return <b>수저</b>;
       case "cup": return <b>컵&잔</b>;
-      case "bottle": return <b>물병</b>;
       case "tool": return <b>조리도구</b>;
       case "item": return <b>주방용품&소품</b>;
       case "tray": return <b>쟁반&트레이</b>;
       case "cloth": return <b>식탁보&매트</b>;
-      case "coaster": return <b>코스터</b>;
+      case "cross": return <b>키친크로스</b>;
       case "lunchbox": return <b>도시락통</b>;
       case "foodtray": return <b>식판</b>;
+      case "bottle": return <b>물병&텀블러</b>;
+      case "homeset": return <b>홈세트</b>;
     }
   }
   
@@ -162,4 +115,68 @@ function ProductListTitle({ courseSlug }) {
   return (
     <h3>{titleKo()} <span>{titleEng()}</span> <SubMenuTitle /></h3>
   );
+}
+
+
+function AsideCategory({ courseSlug }) {
+  switch(courseSlug) {
+    case "tableware":
+    case "dish":
+    case "bowl":
+    case "spoon":
+    case "cup":
+      return (
+        <>
+        <li><Link to="../tableware">전체보기</Link></li>
+        <li><Link to="../dish">공기&접시</Link></li>
+        <li><Link to="../bowl">다용도볼</Link></li>
+        <li><Link to="../spoon">수저</Link></li>
+        <li><Link to="../cup">컵&잔</Link></li>
+        </>
+      );
+    case "kitchen":
+    case "tool":
+    case "item":
+      return (
+        <>
+        <li><Link to="../kitchen">전체보기</Link></li>
+        <li><Link to="../tool">조리도구</Link></li>
+        <li><Link to="../item">주방용품&소품</Link></li>
+        </>
+      );;
+    case "tabledeco":
+    case "tray":
+    case "cloth":
+    case "cross":
+      return (
+        <>
+        <li><Link to="../tabledeco">전체보기</Link></li>
+        <li><Link to="../tray">쟁반&트레이</Link></li>
+        <li><Link to="../cloth">식탁보&매트</Link></li>
+        <li><Link to="../cross">키친크로스</Link></li>
+        </>
+      );
+    case "etc":
+    case "lunchbox":
+    case "foodtray":
+    case "bottle":
+    case "homeset":
+      return (
+        <>
+        <li><Link to="../etc">전체보기</Link></li>
+        <li><Link to="../lunchbox">도시락통</Link></li>
+        <li><Link to="../foodtray">식판</Link></li>
+        <li><Link to="../bottle">물병&텀블러</Link></li>
+        <li><Link to="../homeset">홈세트</Link></li>
+        </>
+      );
+    case "new":
+      return (
+        <li><Link to="../new">전체보기</Link></li>
+      );
+    case "onsale":
+      return (
+        <li><Link to="../onsale">전체보기</Link></li>
+      );
+  }
 }

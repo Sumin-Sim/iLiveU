@@ -29,7 +29,7 @@ figure.productDetail>div>ul {
   overflow: hidden;
 }
 figure.productDetail>div>ul>li {
-  width: 80px; height: 80px;
+  width: 112px; height: 112px;
   margin-right: 8px;
   cursor: pointer;
 }
@@ -37,7 +37,7 @@ figure.productDetail>div>ul>li:last-child {
   margin: 0;
 }
 figure.productDetail>div>ul>li>img {
-  width: 80px; height: 80px;
+  width: 112px; height: 112px;
 }
 
 
@@ -47,7 +47,7 @@ figure.productDetail>div div.btn {
 }
 figure.productDetail>div div.btn>p {
   position: absolute;
-  top: -56px;
+  top: -70px;
   font-size: 32px;
   color: #eee;
   cursor: pointer;

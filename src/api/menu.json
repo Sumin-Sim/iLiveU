@@ -8,8 +8,7 @@
       {"id": "0_0", "title": "공기&접시", "slug": "dish", "imgSrc": "./img/category_1.png"},
       {"id": "0_1", "title": "다용도볼", "slug": "bowl", "imgSrc": "./img/category_2.png"},
       {"id": "0_2", "title": "수저", "slug": "spoon", "imgSrc": "./img/category_3.png"},
-      {"id": "0_3", "title": "컵&잔", "slug": "cup", "imgSrc": "./img/category_4.png"},
-      {"id": "0_4", "title": "물병", "slug": "bottle", "imgSrc": "./img/category_5.png"}
+      {"id": "0_3", "title": "컵&잔", "slug": "cup", "imgSrc": "./img/category_4.png"}
     ]
   },
   {
@@ -30,7 +29,7 @@
     "subMenu": [
       {"id": "2_0", "title": "쟁반&트레이", "slug": "tray", "imgSrc": "./img/category_8.png"},
       {"id": "2_1", "title": "식탁보&매트", "slug": "cloth", "imgSrc": "./img/category_9.png"},
-      {"id": "2_2", "title": "코스터", "slug": "coaster", "imgSrc": "./img/category_10.png"}
+      {"id": "2_2", "title": "키친크로스", "slug": "cross", "imgSrc": "./img/category_10.png"}
     ]
   },
   {
@@ -40,7 +39,9 @@
     "slug": "etc",
     "subMenu": [
       {"id": "3_0", "title": "도시락통", "slug": "lunchbox", "imgSrc": "./img/category_11.png"},
-      {"id": "3_1", "title": "식판", "slug": "foodtray", "imgSrc": "./img/category_12.png"}
+      {"id": "3_1", "title": "식판", "slug": "foodtray", "imgSrc": "./img/category_12.png"},
+      {"id": "3_2", "title": "물병&텀블러", "slug": "bottle", "imgSrc": "./img/category_5.png"},
+      {"id": "3_3", "title": "홈세트", "slug": "homeset", "imgSrc": "./img/category_5.png"}
     ]
   },
   {
