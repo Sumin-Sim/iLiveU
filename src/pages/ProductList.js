@@ -73,110 +73,88 @@ export default function ProductList() {
 
 
 function ProductListTitle({ courseSlug }) {
-  function titleKo() {
-    let findCategory = menuData.find((menu) => menu.slug === courseSlug);
+  let findCategory = menuData.find((menu) => menu.slug === courseSlug);
 
-    console.log(findCategory)
-  }
+  if(!findCategory) {
+    let subMenuList = [];
 
+    for(let i = 0 ; i < menuData.length ; i ++) {
+      const mainMenu = menuData[i];
+      const subMenu = menuData[i].subMenu;
 
-  function titleEng() {
-    /* const findCategory = menuData.find((item) => item.slug == courseSlug || item.subMenu.slug == courseSlug);
-    return findCategory.title; */
-  }
+      for(let i = 0 ; i < subMenu.length ; i ++) {
+        const newtitle = subMenu[i].title;
+        const newSlug = subMenu[i].slug;
 
+        const newMenu = {"title": mainMenu.title, "titleKo": mainMenu.titleKo, "slug": mainMenu.slug, "subTitle": newtitle, "subSlug": newSlug}
 
-  function SubMenuTitle() {
-    switch(courseSlug) {
-      case "tableware":
-      case "kitchen":
-      case "tabledeco":
-      case "etc":
-      case "new":
-      case "onsale":
-        return false;
-      case "dish": return <b>공기&접시</b>;
-      case "bowl": return <b>다용도볼</b>;
-      case "spoon": return <b>수저</b>;
-      case "cup": return <b>컵&잔</b>;
-      case "tool": return <b>조리도구</b>;
-      case "item": return <b>주방용품&소품</b>;
-      case "tray": return <b>쟁반&트레이</b>;
-      case "cloth": return <b>식탁보&매트</b>;
-      case "cross": return <b>키친크로스</b>;
-      case "lunchbox": return <b>도시락통</b>;
-      case "foodtray": return <b>식판</b>;
-      case "bottle": return <b>물병&텀블러</b>;
-      case "homeset": return <b>홈세트</b>;
+        subMenuList = [...subMenuList, newMenu];
+      }
     }
+
+    findCategory = subMenuList.find((subMenu) => subMenu.subSlug === courseSlug);
+  }
+
+
+  function subTitle() {
+    if(!findCategory.subTitle) return false;
+    return <b>{findCategory.subTitle}</b>
   }
   
 
   return (
-    <h3>{titleKo()} <span>{titleEng()}</span> <SubMenuTitle /></h3>
+    <h3>{findCategory.titleKo} <span>{findCategory.title}</span> {subTitle()}</h3>
   );
 }
 
 
 function AsideCategory({ courseSlug }) {
-  switch(courseSlug) {
-    case "tableware":
-    case "dish":
-    case "bowl":
-    case "spoon":
-    case "cup":
-      return (
-        <>
-        <li><Link to="../tableware">전체보기</Link></li>
-        <li><Link to="../dish">공기&접시</Link></li>
-        <li><Link to="../bowl">다용도볼</Link></li>
-        <li><Link to="../spoon">수저</Link></li>
-        <li><Link to="../cup">컵&잔</Link></li>
-        </>
-      );
-    case "kitchen":
-    case "tool":
-    case "item":
-      return (
-        <>
-        <li><Link to="../kitchen">전체보기</Link></li>
-        <li><Link to="../tool">조리도구</Link></li>
-        <li><Link to="../item">주방용품&소품</Link></li>
-        </>
-      );;
-    case "tabledeco":
-    case "tray":
-    case "cloth":
-    case "cross":
-      return (
-        <>
-        <li><Link to="../tabledeco">전체보기</Link></li>
-        <li><Link to="../tray">쟁반&트레이</Link></li>
-        <li><Link to="../cloth">식탁보&매트</Link></li>
-        <li><Link to="../cross">키친크로스</Link></li>
-        </>
-      );
-    case "etc":
-    case "lunchbox":
-    case "foodtray":
-    case "bottle":
-    case "homeset":
-      return (
-        <>
-        <li><Link to="../etc">전체보기</Link></li>
-        <li><Link to="../lunchbox">도시락통</Link></li>
-        <li><Link to="../foodtray">식판</Link></li>
-        <li><Link to="../bottle">물병&텀블러</Link></li>
-        <li><Link to="../homeset">홈세트</Link></li>
-        </>
-      );
-    case "new":
-      return (
-        <li><Link to="../new">전체보기</Link></li>
-      );
-    case "onsale":
-      return (
-        <li><Link to="../onsale">전체보기</Link></li>
-      );
+  let AllMenuList = [];
+
+  for(let i = 0 ; i < menuData.length ; i ++) {
+    const mainMenu = menuData[i];
+    const subMenu = menuData[i].subMenu;
+
+    for(let i = 0 ; i < subMenu.length ; i ++) {
+      const newtitle = subMenu[i].title;
+      const newSlug = subMenu[i].slug;
+
+      const newMenu = {"title": mainMenu.title, "titleKo": mainMenu.titleKo, "slug": mainMenu.slug, "subTitle": newtitle, "subSlug": newSlug}
+
+      AllMenuList = [...AllMenuList, newMenu];
+    }
+
+    if(mainMenu.subMenu.length === 0) {
+      const newMenu = {"title": mainMenu.title, "titleKo": mainMenu.titleKo, "slug": mainMenu.slug}
+
+      AllMenuList = [...AllMenuList, newMenu];
+    }
   }
+
+
+  let findCategory = AllMenuList.filter((menu) => menu.slug === courseSlug);
+
+  if(findCategory.length === 0) {
+    const findMainSlug = AllMenuList.find((menu) => menu.subSlug === courseSlug).slug;
+
+    findCategory = AllMenuList.filter((menu) => menu.slug === findMainSlug);
+  }
+
+
+  function subAsideList() {
+    if(findCategory.length > 1) {
+      return (
+        findCategory.map((item) => (
+          <li key={item.subSlug}><Link to={"../" + item.subSlug}>{item.subTitle}</Link></li>
+        ))
+      );
+    }
+  }
+  
+  return (
+    <>
+    <li><Link to={"../" + findCategory[0].slug}>전체보기</Link></li>
+    {subAsideList()}
+    </>
+  );
 }
