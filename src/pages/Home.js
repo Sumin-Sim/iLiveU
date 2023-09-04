@@ -16,12 +16,13 @@ export default function Home() {
       <h3 className="hide">추천 상품 슬라이더</h3>
 
       <ul>
-        <li><Link to=""><img src="./img/visual_1.png" alt="visual_1" /></Link></li>
-        <li><Link to=""><img src="./img/visual_2.png" alt="visual_2" /></Link></li>
-        <li><Link to=""><img src="./img/visual_3.png" alt="visual_3" /></Link></li>
-        <li><Link to=""><img src="./img/visual_4.png" alt="visual_4" /></Link></li>
-        <li><Link to=""><img src="./img/visual_5.png" alt="visual_5" /></Link></li>
-        <li><Link to=""><img src="./img/visual_6.png" alt="visual_6" /></Link></li>
+        <li><Link to=""><img src="./img/visual_1.jpg" alt="풍성한 한가위 선물 특별전" /></Link></li>
+        <li><Link to=""><img src="./img/visual_2.jpg" alt="Autumn 9월 회원 혜택" /></Link></li>
+        <li><Link to=""><img src="./img/visual_3.jpg" alt="2023 NEW 자카드발매트 6종 출시" /></Link></li>
+        <li><Link to=""><img src="./img/visual_4.jpg" alt="2023 신제품 데이 프라이팬 4종 출시" /></Link></li>
+        <li><Link to=""><img src="./img/visual_5.jpg" alt="Good Vibes 머그&플레이트 출시" /></Link></li>
+        <li><Link to=""><img src="./img/visual_6.jpg" alt="스테디 셀러 마리벨 시리즈 신제품 런칭" /></Link></li>
+        <li><Link to=""><img src="./img/visual_7.jpg" alt="프렌치 무드 디너웨어 'BLANC'" /></Link></li>
       </ul>
 
       <div className="btn">

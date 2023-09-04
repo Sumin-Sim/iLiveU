@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 import ProductItem from "../components/ProductItem";
 
+import { getCourse } from "../api/api";
 import menuData from "../api/menu.json";
 
 import { BiSolidDownArrow } from "react-icons/bi";
@@ -10,13 +11,15 @@ import { HiChevronDoubleLeft, HiChevronDoubleRight, HiChevronLeft, HiChevronRigh
 import "../css/Search.css";
 
 export default function Search() {
+  const courses = getCourse();
+
   return (
     <section className="search">
       <div>
         <h3>검색어 <span>검색 결과</span></h3>
 
         <div className="listTopText">
-          <p>총 <b>0개</b>의 제품이 검색되었습니다.</p>
+          <p>총 <b>{courses.length}개</b>의 제품이 검색되었습니다.</p>
 
           <div className="sortBtn">
             <p>추천순<i><BiSolidDownArrow /></i></p>
@@ -31,21 +34,14 @@ export default function Search() {
         </div>
       
         <div className="search_content">
-          <ProductItem />
-          <ProductItem />
-          <ProductItem />
-          <ProductItem />
-          <ProductItem />
-          <ProductItem />
-          <ProductItem />
-          <ProductItem />
-          <ProductItem />
-          <ProductItem />
-          <ProductItem />
-          <ProductItem />
-          <ProductItem />
-          <ProductItem />
-          <ProductItem />
+          {
+            courses.map((item) => (
+              <ProductItem
+                key={item.id}
+                course={item}
+              />
+            ))
+          }
         
           <div className="pageCount">
             <div>

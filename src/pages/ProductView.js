@@ -165,7 +165,14 @@ function ReviewList({ review }) {
 
 
 function userIdHide(userId) {
-  return userId
+  const userIdArr = userId.split("").splice(0,5);
+  for(let i in userIdArr) {
+    if(i > 0) {
+      userIdArr.splice(i,1,'*');
+    }
+  }
+  
+  return userIdArr.join('');
 }
 
 

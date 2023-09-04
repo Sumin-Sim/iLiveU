@@ -6,9 +6,10 @@
     "slug": "tableware",
     "subMenu": [
       {"id": "0_0", "title": "공기&접시", "slug": "dish", "imgSrc": "./img/category_1.png"},
-      {"id": "0_1", "title": "다용도볼", "slug": "bowl", "imgSrc": "./img/category_2.png"},
-      {"id": "0_2", "title": "수저", "slug": "spoon", "imgSrc": "./img/category_3.png"},
-      {"id": "0_3", "title": "컵&잔", "slug": "cup", "imgSrc": "./img/category_4.png"}
+      {"id": "0_1", "title": "소스볼&종지", "slug": "sauce", "imgSrc": "./img/category_1.png"},
+      {"id": "0_2", "title": "다용도볼&면기", "slug": "bowl", "imgSrc": "./img/category_2.png"},
+      {"id": "0_3", "title": "수저", "slug": "spoon", "imgSrc": "./img/category_3.png"},
+      {"id": "0_4", "title": "컵&잔", "slug": "cup", "imgSrc": "./img/category_4.png"}
     ]
   },
   {
@@ -18,7 +19,7 @@
     "slug": "kitchen",
     "subMenu": [
       {"id": "1_0", "title": "조리도구", "slug": "tool", "imgSrc": "./img/category_6.png"},
-      {"id": "1_1", "title": "주방용품&소품", "slug": "item", "imgSrc": "./img/category_7.png"}
+      {"id": "1_1", "title": "주방용품", "slug": "item", "imgSrc": "./img/category_7.png"}
     ]
   },
   {
@@ -40,8 +41,7 @@
     "subMenu": [
       {"id": "3_0", "title": "도시락통", "slug": "lunchbox", "imgSrc": "./img/category_11.png"},
       {"id": "3_1", "title": "식판", "slug": "foodtray", "imgSrc": "./img/category_12.png"},
-      {"id": "3_2", "title": "물병&텀블러", "slug": "bottle", "imgSrc": "./img/category_5.png"},
-      {"id": "3_3", "title": "홈세트", "slug": "homeset", "imgSrc": "./img/category_5.png"}
+      {"id": "3_2", "title": "물병&텀블러", "slug": "bottle", "imgSrc": "./img/category_5.png"}
     ]
   },
   {

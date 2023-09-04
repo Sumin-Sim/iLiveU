@@ -16,7 +16,7 @@ h3.mainTitle>span {
 
 /* section#visual */
 section#visual {
-  height: 800px;
+  height: 630px;
   position: relative;
 }
 section#visual>ul {
@@ -35,9 +35,9 @@ section#visual>div.btn {
 }
 section#visual>div.btn>p {
   position: absolute;
-  top: calc(-400px - 24px);
+  top: calc(-310px - 24px);
   font-size: 48px;
-  color: #ffaea0;
+  color: #eee;
   cursor: pointer;
 }
 section#visual>div.btn>p:hover {
@@ -65,7 +65,7 @@ section#visual>div.slideCount>span {
   margin-right: 16px;
   display: block;
   border-radius: 50%;
-  background-color: #ff6347;
+  background-color: #eee;
   opacity: 0.5;
   cursor: pointer;
 }

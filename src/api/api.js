@@ -4,6 +4,7 @@ import { PiStarFill } from "react-icons/pi";
 
 // course
 export function getCourse(courseSlug) {
+  if(!courseSlug) return courses;
   return courses.filter((course) => course.category.majorClass.slug === courseSlug || course.category.minorClass.slug === courseSlug);
 }
 
